@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-<title>repository naming for Octopress on Github ( integrating design )</title>
+<title>octoburn ( integrating design )</title>
 
 
   <meta name="author" content="hilary j holz">
@@ -16,8 +16,6 @@
 <meta name="description" content="coding blog by full stack web dev">
 
   
-  <meta name="keywords" content="Octopress, github, and walkthrough">
-
 
 
   <meta name="HandheldFriendly" content="True">
@@ -25,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<link rel="canonical" href="http://hholz.com/blog/2012/deploying-octopress-on-github/">
+<link rel="canonical" href="http://hholz.com/octoburn/">
 
   
 <link href="/stylesheets/default.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -40,7 +38,7 @@
 </head>
 
 <body itemscope 
-      itemtype="http://schema.org/Blog">
+      itemtype="http://schema.org/WebPage">
   <div id="grid">
     <header>
   <div class="banner">
@@ -100,13 +98,10 @@
 </header>
 
     <article class="main-content">
-      <article class="content" itemscope 
-         itemtype="http://schema.org/BlogPosting"
-         role="article">
+      <article class="content">
   <header>
-    <time datetime="2012-08-30T10:40:00-07:00" itemprop="datePublished">Aug 30<span>th</span>, 2012</time><a rel="bookmark" href="http://hholz.com/blog/2012/deploying-octopress-on-github/" itemprop="url">permalink</a><nav class="tag-links"><ul><li><a rel="tag" href="/tags/octopress.html"><span itemprop="keywords">Octopress</span></a></li><li><a rel="tag" href="/tags/github.html"><span itemprop="keywords">github</span></a></li><li><a rel="tag" href="/tags/walkthrough.html"><span itemprop="keywords">walkthrough</span></a></li></ul></nav>
-    <h1 itemprop="headline" class="page-title">repository naming for Octopress on Github</h1>
-
+    <h1 class="page-title">octoburn</h1>
+    <time datetime="2012-09-19T23:11:00-07:00" itemprop="datePublished">Sep 19<span>th</span>, 2012</time>
     
   <menu type="list" label="share">
     <li class="twitter-share">
@@ -116,74 +111,118 @@
                               alt="twitter"></a></li>
     <li class="googleplus-share">
       <a title="+1 on Google Plus" 
-         href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://hholz.com/blog/2012/deploying-octopress-on-github/" 
+         href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://hholz.com/octoburn/index.html" 
          target="_blank"><img src="/images/icon/googleplus.png" 
                               alt="+1 on Google Plus"></a></li>
     <li class="facebook-share">
       <a title="share on facebook" 
-         href="http://www.facebook.com/sharer.php?u=http://hholz.com/blog/2012/deploying-octopress-on-github/" 
+         href="http://www.facebook.com/sharer.php?u=http://hholz.com/octoburn/index.html" 
          target="_blank"><img src="/images/icon/facebook.png" 
                               alt="share on facebook"></a></li>
   </menu>
 
 
   </header>
-  <section itemprop="articleBody">
-    <p>While the
-<a href="http://octopress.org/docs/deploying/github/">Octopress instructions</a>
-for deploying an Octopress blog on Github are generally quite
-straightforward, some confusion over the repository name seems fairly
-common.  I ran into it myself. Hopefully this post can spare some
-other folks hours of research and head-scratching.<!--more--></p>
+  <p><a href="https://github.com/hilary/octoburn">Octoburn</a> is a blogging engine
+for <a href="https://github.com/mojombo/jekyll">Jekyll</a> pages based on
+<a href="https://github.com/imathis/octopress/tree/2.1">Octopress</a>.</p>
 
-<h2 id="repository-name">repository name</h2>
+<h2 id="toc">contents</h2>
 
-<h3 id="personal-octopress-blogs-use-eponymous-repositories">personal Octopress blogs use eponymous repositories</h3>
+<ul class="toc">
+ <li><a href="#leveraging_compass">leveraging Compass</a>
+  <ul><li><a href="#susy">Susy for responsive layout</a></li>
+  <li><a href="#vertical_rhythm">Vertical Rhythm for readability</a></li></ul>
+ </li>
+ <li><a href="#microdata">microdata</a></li>
+ <li><a href="#convention">convention over configuration</a>
+  <ul><li><a href="#waldo">where&#8217;s waldo?</a></li>
+  <li><a href="#tags">tags are not categories</a></li></ul>
+ </li>
+ <li><a href="#next">what&#8217;s next?</a></li>
+</ul>
 
-<p>For a personal Octopress blog, you <strong>must</strong> use
-<code>&lt;username&gt;.github.com</code> (where <code>&lt;username&gt;</code> is your github username)
-as the name of the repository you create on Github:</p>
+<h2 id="a-nameleveragingcompassaleveraging-compass"><a name="leveraging_compass"></a>leveraging Compass</h2>
 
-<p><img class="center" src="/images/posts/github_form.png" title="Creating a User Octopress Repository on Github" alt="A screenshot of the form for creating a repository on Github, showing hilary.github.com entered in the new repository name field." /></p>
+<h3 id="a-namesusyasusyhttpsusyoddbirdnet-for-responsive-layout"><a name="susy"></a><a href="http://susy.oddbird.net/">Susy</a> for responsive layout.</h3>
 
-<p>From the Github Pages Guide to <a href="https://help.github.com/articles/user-organization-and-project-pages">User, Organization and Project Pages</a> we
-learn that you can only use your full username, anything else will not work.</p>
+<p>While doing a Susy design from scratch can present something of an
+initial learning curve, customizing an existing design is a joy. Want
+4 asides instead of 3 in your default layout? Allocate columns to each
+aside in <code>sass/asides/_default_layout.scss</code> and regenerate. You’re done.</p>
 
-<h3 id="project-octopress-blogs-use-their-own-repositories">project Octopress blogs use their own repositories</h3>
+<h3 id="a-nameverticalrhythmavertical-rhythmhttpcompass-styleorgreferencecompasstypographyverticalrhythm-for-readability"><a name="vertical_rhythm"></a><a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Vertical Rhythm</a> for readability</h3>
 
-<p>Do not create a new repository for a project Octopress blog! The blog
-lives in a branch of the project repository called <code>gh-pages</code> which is
-created by the <code>rake setup_github_pages</code> command.</p>
+<p>Vertical rhythm refers to the way text flows down a page. The core of
+Compass’s Vertical Rhythm library is the ability to adjust both
+font-size and line-height with a single call. The <code>establish-baseline</code>
+mixin is integrated with other Compass libraries such as Susy.</p>
 
-<h2 id="repository-url">repository url</h2>
+<h3 id="and-many-more">and many more</h3>
 
-<p>The next stumbling block came for me when I ran <code>bin/rake setup_github_pages</code>.
-Having learned from my last mistake, I was determined to take the instructions
-more literally. (You can see where this story is going, right? Right?) </p>
+<p>Octoburn uses a host of smaller Compass libraries as well. Two
+examples are <a href="http://compass-style.org/reference/compass/typography/lists/horizontal_list/">Horizontal
+List</a>
+and
+<a href="http://compass-style.org/reference/compass/utilities/general/float/">float</a>.</p>
 
-<p><img class="center" src="/images/posts/bin_rake_setup_first.png" title="Invoking rake setup_github_pages" alt="A screenshot of an emacs shell window. Rake has been invoked on setup_github_pages and has asked: Enter the read%2Fwrite url for your repository. For example, git%40github.com:your_username%2Fyour_username.github.com" /></p>
+<p>Why use Compass? The single largest benefit is that the libraries
+encapsulate cross-browser issues, and continue to do so as browsers
+evolve. Life is too short to reinvent the wheel, or, in this case get
+run over by it!</p>
 
-<p>Hmmmm…. HMMMMMMMM…. Check the repo on github. The read/write access url
-is <code>git@github.com:hilary/hilary.github.com.git</code>. Argh! Now what do I do?
-Follow the instructions or the example? I chose incorrectly, and followed
-the instructions. Don’t do that. Follow the example. Leave off the <code>.git</code>:</p>
+<p>Comprehensive libraries such as Susy and Vertical Rhythm make it possible
+to achieve in days what used to take a week. They also make implementing
+changes fun as opposed to mildly terrifying.</p>
 
-<p><img class="center" src="/images/posts/bin_rake_setup_github.png" title="Invoking rake setup_github_pages correctly" alt="Another screenshot of the same emacs shell. git%40github.com:hilary%2Fhilary.github.com has been entered in response to the prompt" /></p>
+<h2 id="a-namemicrodataamicrodatahttpschemaorg"><a name="microdata"></a><a href="http://schema.org/">microdata</a></h2>
 
-<h2 id="anything-else">anything else?</h2>
+<p>Octoburn’s markup uses relevant microdata schemas. A set of microdata liquid
+filters is included as a plugin for easy template customization.</p>
 
-<p>I also got my git branches rather tangled and had to untangle them. I
-broke those notes off into a separate post (underway). In part, it
-seems a little less common of an Octopress noob problem. Mostly,
-though, I learned a lot from the experience, and am learning more from
-doing an in-depth write-up.</p>
+<p>Microdata is critical to having your information correctly indexed by
+the major search engines. A new set of extremely promising schemas for
+technical materials is in review which I plan to incorporate.</p>
 
-<p>Having Octopress setup problems you haven’t solved? Leave a comment and I’ll
-look over your virtual shoulder and see if I can help.</p>
+<p>Encoding markup with microdata has a secondary benefit. Semantic HTML5
+is challenging. Many elements can legitimately be marked up in
+multiple ways depending on context. I often find that ambiguous
+elements resolve themselves as I work through a schema.</p>
+
+<h2 id="a-nameconventionaconvention-over-configuration"><a name="convention"></a>convention over configuration</h2>
+
+<h3 id="a-namewaldoawheres-waldo"><a name="waldo"></a>where’s waldo?</h3>
+
+<p>I spend a lot of my time in Rails; one of the strengths of the Rails
+architecture is how easy it is to find
+things. <a href="http://sass-lang.com/">Sass</a>’s <code>@import</code> facility made it
+possible for me to create a similar architecture in Octoburn.</p>
+
+<p>Consider, for example, the follow menu at the top of each page:</p>
+
+<ul>
+  <li>the template is <code>_includes/menus/follow_menu.html</code></li>
+  <li>the sass is <code>menus/_follow_menu.scss</code></li>
+</ul>
+
+<p>(There’s more to the Sass import design, but a proper treatment would
+be a full post.) </p>
+
+<h3 id="a-nametagsatags-are-not-categories"><a name="tags"></a>tags are not categories</h3>
+
+<p>Octoburn offers built-in support for tags: automatically generated 
+tag pages, liquid filters for a single tag link and a full set of
+tag links and automatically generated tag feeds. I am currently reviewing
+several of the existing Jekyll tag cloud plugins to see if one of them
+will do.</p>
+
+<h2 id="a-namenextawhats-next"><a name="next"></a>what’s next?</h2>
+
+<p>While I have lots of plans for Octoburn, my next step is to turn it
+into a gem. Hi, my name is Hilary, and I addicted to agile software
+development. I need my <abbr title="Behavior-Driven Development">BDD</abbr> toolset!</p>
 
 
-  </section>
-  <nav class="tag-links"><ul><li><a rel="tag" href="/tags/octopress.html"><span itemprop="keywords">Octopress</span></a></li><li><a rel="tag" href="/tags/github.html"><span itemprop="keywords">github</span></a></li><li><a rel="tag" href="/tags/walkthrough.html"><span itemprop="keywords">walkthrough</span></a></li></ul></nav>
   
   <menu type="list" label="share">
     <li class="twitter-share">
@@ -193,26 +232,15 @@ look over your virtual shoulder and see if I can help.</p>
                               alt="twitter"></a></li>
     <li class="googleplus-share">
       <a title="+1 on Google Plus" 
-         href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://hholz.com/blog/2012/deploying-octopress-on-github/" 
+         href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://hholz.com/octoburn/index.html" 
          target="_blank"><img src="/images/icon/googleplus.png" 
                               alt="+1 on Google Plus"></a></li>
     <li class="facebook-share">
       <a title="share on facebook" 
-         href="http://www.facebook.com/sharer.php?u=http://hholz.com/blog/2012/deploying-octopress-on-github/" 
+         href="http://www.facebook.com/sharer.php?u=http://hholz.com/octoburn/index.html" 
          target="_blank"><img src="/images/icon/facebook.png" 
                               alt="share on facebook"></a></li>
   </menu>
-
-
-  
-  <nav class="page-nav" role="navigation">
-    
-      <a rel="prev"
-         href="/blog/2012/on-delicious/" 
-         title="previous: on delicious, finally">&laquo; on delicious, finally</a>
-    
-    
-  </nav>
 
 
   
@@ -227,7 +255,6 @@ look over your virtual shoulder and see if I can help.</p>
 
 
 </article>
-
 
       
   <section class="default-aside aside-base">
@@ -280,8 +307,8 @@ look over your virtual shoulder and see if I can help.</p>
   var disqus_shortname = 'integrating';
   var disqus_developer = 0;
   
-    var disqus_identifier = 'http://hholz.com/blog/2012/deploying-octopress-on-github/';
-    var disqus_url = 'http://hholz.com/blog/2012/deploying-octopress-on-github/';
+    var disqus_identifier = 'http://hholz.com/octoburn/index.html';
+    var disqus_url = 'http://hholz.com/octoburn/index.html';
     var disqus_script = 'embed.js';
   
   (function () {

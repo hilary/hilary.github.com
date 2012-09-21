@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[integrating design: tag: Octopress]]></title>
+  <link href="http://hholz.com//octopress.xml" rel="self"/>
+  <link href="http://hholz.com"/>
+  <updated>Liquid error: undefined method `xmlschema' for "2012-09-21 00:38":String</updated>
+  <id>http://hholz.com/</id>
+<author><name><![CDATA[hilary j holz]]></name></author>
+<generator uri="octoburn/">Octoburn</generator>
+
+
+  
+    <entry>
+  
+  
+  <title type="html"><![CDATA[repository naming for Octopress on Github]]></title>
+  <link href="http://hholz.com/blog/2012/deploying-octopress-on-github/"/>
+  <updated>2012-08-30T10:40:00-07:00</updated>
+  <id>http://hholz.com/blog/2012/deploying-octopress-on-github</id>
+  <content type="html"><![CDATA[Liquid error: undefined method `gsub' for nil:NilClass]]></content>
+</entry>
+
+
+  
+    <entry>
+  
+  
+  <title type="html"><![CDATA[on delicious, finally]]></title>
+  <link href="http://hholz.com/blog/2012/on-delicious/"/>
+  <updated>2012-08-28T14:28:00-07:00</updated>
+  <id>http://hholz.com/blog/2012/on-delicious</id>
+  <content type="html"><![CDATA[Liquid error: undefined method `gsub' for nil:NilClass]]></content>
+</entry>
+
+
+  
+</feed>
+

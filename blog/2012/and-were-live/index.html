@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-<title>integrating design</title>
+<title>and we're live ( integrating design )</title>
 
 
   <meta name="author" content="hilary j holz">
@@ -16,6 +16,8 @@
 <meta name="description" content="coding blog by full stack web dev">
 
   
+  <meta name="keywords" content="Octoburn and Octopress">
+
 
 
   <meta name="HandheldFriendly" content="True">
@@ -23,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-<link rel="canonical" href="http://hholz.com/">
+<link rel="canonical" href="http://hholz.com/blog/2012/and-were-live/">
 
   
 <link href="/stylesheets/default.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -37,8 +39,8 @@
   <link href="/favicon.png" rel="icon">
 </head>
 
-<body itemscope  id="home" 
-      itemtype="http://schema.org/WebPage">
+<body itemscope 
+      itemtype="http://schema.org/Blog">
   <div id="grid">
     <header>
   <div class="banner">
@@ -98,9 +100,92 @@
 </header>
 
     <article class="main-content">
-      <section class="content">
-  <p>Not much on the home page yet, you&#8217;ll probably find the blog <a href="/blog/">index</a> or <a href="/octoburn/">Octoburn</a> home page more interesting at present.</p>
-</section>
+      <article class="content" itemscope 
+         itemtype="http://schema.org/BlogPosting"
+         role="article">
+  <header>
+    <time datetime="2012-09-21T00:51:00-07:00" itemprop="datePublished">Sep 21<span>st</span>, 2012</time><a rel="bookmark" href="http://hholz.com/blog/2012/and-were-live/" itemprop="url">permalink</a><nav class="tag-links"><ul><li><a rel="tag" href="/tags/octoburn.html"><span itemprop="keywords">Octoburn</span></a></li><li><a rel="tag" href="/tags/octopress.html"><span itemprop="keywords">Octopress</span></a></li></ul></nav>
+    <h1 itemprop="headline" class="page-title">and we're live</h1>
+
+    
+  <menu type="list" label="share">
+    <li class="twitter-share">
+      <a href="http://twitter.com/share" 
+         title="tweet" 
+         target="_blank"><img src="/images/icon/twitter.png" 
+                              alt="twitter"></a></li>
+    <li class="googleplus-share">
+      <a title="+1 on Google Plus" 
+         href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://hholz.com/blog/2012/and-were-live/" 
+         target="_blank"><img src="/images/icon/googleplus.png" 
+                              alt="+1 on Google Plus"></a></li>
+    <li class="facebook-share">
+      <a title="share on facebook" 
+         href="http://www.facebook.com/sharer.php?u=http://hholz.com/blog/2012/and-were-live/" 
+         target="_blank"><img src="/images/icon/facebook.png" 
+                              alt="share on facebook"></a></li>
+  </menu>
+
+
+  </header>
+  <section itemprop="articleBody">
+    <p>I’ve spent much of the past several weeks working on what started as
+an <a href="https://github.com/imathis/octopress">Octopress</a> theme and turned
+into its own blogging engine. This website now runs on that engine;
+Octoburn.</p>
+
+<p>You can read more about Octoburn on its <a href="http://hholz.com/octoburn/">project
+page</a>. The
+<a href="https://github.com/hilary/octoburn">code</a> is on github, available for
+use. You might want to wait until the next release, as I am currently
+turning Octoburn into a gem.</p>
+
+  </section>
+  <nav class="tag-links"><ul><li><a rel="tag" href="/tags/octoburn.html"><span itemprop="keywords">Octoburn</span></a></li><li><a rel="tag" href="/tags/octopress.html"><span itemprop="keywords">Octopress</span></a></li></ul></nav>
+  
+  <menu type="list" label="share">
+    <li class="twitter-share">
+      <a href="http://twitter.com/share" 
+         title="tweet" 
+         target="_blank"><img src="/images/icon/twitter.png" 
+                              alt="twitter"></a></li>
+    <li class="googleplus-share">
+      <a title="+1 on Google Plus" 
+         href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://hholz.com/blog/2012/and-were-live/" 
+         target="_blank"><img src="/images/icon/googleplus.png" 
+                              alt="+1 on Google Plus"></a></li>
+    <li class="facebook-share">
+      <a title="share on facebook" 
+         href="http://www.facebook.com/sharer.php?u=http://hholz.com/blog/2012/and-were-live/" 
+         target="_blank"><img src="/images/icon/facebook.png" 
+                              alt="share on facebook"></a></li>
+  </menu>
+
+
+  
+  <nav class="page-nav" role="navigation">
+    
+      <a rel="prev"
+         href="/blog/2012/deploying-octopress-on-github/" 
+         title="previous: repository naming for Octopress on Github">&laquo; repository naming for Octopress on Github</a>
+    
+    
+  </nav>
+
+
+  
+  <section itemprop="comment" 
+           itemscope 
+           itemtype="http://schema.org/UserComments">
+    <h1>Comments</h1>
+    <section id="disqus_thread" aria-live="polite">
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  </section>
+
+
+</article>
+
 
       
   <section class="default-aside aside-base">
@@ -155,7 +240,9 @@
   var disqus_shortname = 'integrating';
   var disqus_developer = 0;
   
-    var disqus_script = 'count.js';
+    var disqus_identifier = 'http://hholz.com/blog/2012/and-were-live/';
+    var disqus_url = 'http://hholz.com/blog/2012/and-were-live/';
+    var disqus_script = 'embed.js';
   
   (function () {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

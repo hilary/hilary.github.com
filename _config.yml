@@ -1,47 +1,71 @@
-url            : http://hholz.com
-title          : integrating design
-subtitle       : your friendly native guide
-author         : hilary j holz
-simple_search  : http://google.com/search
-description    : coding blog by full stack web dev
-date_format    : "ordinal"
+# ------------------------------------------------------------------------------
+# Octoburn specific config
+# ------------------------------------------------------------------------------
 
-generator_uri  : octoburn/
-generator_name : Octoburn
+feed_url           : feeds/integrating_design.xml
+feed_email         :
+feed_dir           : feeds
+feed_max_posts     : 20 
 
+tag_dir            : tag
+tag_feeds          : true
+tag_feed_max_posts : 20
+
+index_max_posts    : 6             # number of posts to show on blog index page
+archive_max_posts  : 20            # number of posts to show on blog archive pg
+
+github_follow_url    : https://github.com/users/follow?target=      
+delicious_follow_url : https://www.delicious.com/settings/networkedit?action=add&username=
+google_plus_user     : holz.hilary@gmail.com
+
+url                  : http://hholz.com
+title                : integrating design
+subtitle             : your friendly native guide
+author               : hilary j holz
+simple_search        : http://google.com/search
+description          : coding blog by full stack web dev
+date_format          : "%B %o %Y"
+subscribe_email      :
+
+excerpt_link         : "[ read me ]"
+excerpt_in_feed      : false
+permalink_label      : "permalink"
+permalink_label_feed : "&#9875; permalink"
+
+recent_posts         : 5
+
+# ------------------------------------------------------------------------------
+# javascript widgets
+# ------------------------------------------------------------------------------
+
+github_user       : hilary
+github_repo_count : 4
+github_skip_forks : true
+
+delicious_user    : hilzh
+delicious_count   : 6
+
+disqus_short_name : integrating
+
+# ------------------------------------------------------------------------------
+# Jekyll core
+# ------------------------------------------------------------------------------
+
+#-- paths
 root           : /
+permalink      : /blog/:year/:title/
+
+#-- directories
 source         : source
 destination    : public
 plugins        : plugins
 code_dir       : downloads/code
-tag_dir        : tags
+
+#-- processing content
 markdown       : kramdown
 pygments       : false
 
-tag_feeds       : true
-feed_dir        : feeds
-feed_url        : feeds/integrating_design.xml
-excerpt_in_feed : false
 
-permalink       : /blog/:year/:title/
-permalink_label : "permalink"
-permalink_label_feed : "&#9875; permalink"
 
-index_posts       : 6
-excerpt_link      : "[ read me ]"
-archive_max_posts : 20
 
-disqus_short_name : integrating
 
-recent_posts         : 5
-
-github_user          : hilary
-github_repo_count    : 4
-github_skip_forks    : true
-github_follow_url    : https://github.com/users/follow?target=      
-
-delicious_user       : hilzh
-delicious_count      : 6
-delicious_follow_url : https://www.delicious.com/settings/networkedit?action=add&username=
-
-google_plus_user     : holz.hilary@gmail.com

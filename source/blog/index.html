@@ -5,7 +5,7 @@ body_id     : blog-index
 updated     : 2012-09-08 22:55
 ---
 <article role="article" class="content">
-  <ul>{% for post in site.posts limit: site.index_posts %}
+  <ul>{% for post in site.posts limit: site.index_max_posts %}
     <li>{% include articles/excerpt_entry.html %}</li>
   {% endfor %}</ul>
   <footer id="index-footer">

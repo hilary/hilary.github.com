@@ -3,8 +3,8 @@ $serif : Georgia, Times, Times New Roman, serif;
 $mono  : Menlo, Monaco, lucida console, Courier New, monospace;
 
 .sans  { font-family : $sans;  }
-.serif { font-family : $serif; text-rendering : optimizelegibility; }
-.mono  { font-family : $mono; text-rendering : optimizelegibility; }
+.serif { font-family : $serif; }
+.mono  { font-family : $mono;  }
 
 a { @include hover-link; }
 
@@ -21,7 +21,10 @@ a { @include hover-link; }
 
 body { @extend .main; }
 
-header, h1, h2, h3, h4, h5, h6 { @extend .header; }
+header {
+  @extend .header; 
+  h1, h2, h3, h4, h5, h6 { text-rendering : optimizelegibility; }
+}
 
 pre {
   @extend .code;

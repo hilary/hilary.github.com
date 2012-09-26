@@ -8,7 +8,7 @@
     padding : .2em $horizontal-aside-single;
 
     .primary-navlist { 
-      @include span-columns(11, $horizontal-aside-columns); 
+      @include span-columns(13, $horizontal-aside-columns); 
       margin-right : 0;
       padding-right : $horizontal-aside-single;
     }

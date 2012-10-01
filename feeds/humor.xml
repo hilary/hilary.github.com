@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[integrating design: tag: Firefox]]></title>
-  <link href="http://hholz.com//firefox.xml" rel="self"/>
+  <title><![CDATA[integrating design: tag: humor]]></title>
+  <link href="http://hholz.com//humor.xml" rel="self"/>
   <link href="http://hholz.com"/>
   <updated>Liquid error: undefined method `xmlschema' for "2012-09-30 20:57":String</updated>
   <id>http://hholz.com/</id>
@@ -13,10 +13,10 @@
     <entry>
   
   
-  <title type="html"><![CDATA[on delicious, finally]]></title>
-  <link href="http://hholz.com/blog/2012/on-delicious/"/>
-  <updated>2012-08-28T14:28:00-07:00</updated>
-  <id>http://hholz.com/blog/2012/on-delicious</id>
+  <title type="html"><![CDATA[doc of the day]]></title>
+  <link href="http://hholz.com/blog/2012/doc-of-the-day/"/>
+  <updated>2012-09-30T18:34:00-07:00</updated>
+  <id>http://hholz.com/blog/2012/doc-of-the-day</id>
   <content type="html"><![CDATA[Liquid error: undefined method `gsub' for nil:NilClass]]></content>
 </entry>
 

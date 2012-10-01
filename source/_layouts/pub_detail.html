@@ -1,0 +1,15 @@
+---
+layout      : default
+aside_style : default
+---
+<article class="content">
+  <header>
+    <h1 class="page-title">{{ page.entry.title }}</h1>
+    <h2>{{ page.entry.author }}</h2>
+    {{ page.date | date_published }}{{ page.updated | date_published modified }}
+    {% include menus/sharing_menu.html %}
+  </header>
+  <p>{{ page.entry.abstract }}</p>
+  {% include menus/sharing_menu.html %}
+  {% include sections/comments.html %}
+</article>

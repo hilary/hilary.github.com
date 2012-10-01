@@ -1,11 +1,12 @@
 # -*- mode: markdown -*-
 ---
-layout      : post
-title       : "on delicious, finally"
-date        : 2012-08-28 14:28
-comments    : true
-tldr        : I joined Delicious yesterday. For those of you living under a rock for the past decade, Delicious is the original social bookmarking web service.
-tags        : 
+layout   : post
+title    : "on delicious, finally"
+date     : 2012-08-28 14:28
+comments : true
+sharing  : true
+tldr     : I joined Delicious yesterday. For those of you living under a rock for the past decade, Delicious is the original social bookmarking web service.
+tags     : 
 - social networks
 - Octopress
 - Firefox

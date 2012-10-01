@@ -65,7 +65,23 @@ code_dir       : downloads/code
 markdown       : kramdown
 pygments       : false
 
+# ------------------------------------------------------------------------------
+# Jekyll plugins
+# ------------------------------------------------------------------------------
 
+#-- jekyll-scholar
+scholar :
+  style          : ieee-w-url
+  locale         : en
 
+  sort_by        : none
+  order          : ascending
 
+  source         : ./source/_publications
+  bibliography   : pubs.bib
 
+  details_dir    : publications
+  details_layout : publications.html
+  details_link   : full citation
+
+  query: "@*" 

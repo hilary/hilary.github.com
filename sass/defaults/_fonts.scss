@@ -8,13 +8,13 @@ $mono  : Menlo, Monaco, lucida console, Courier New, monospace;
 
 a { @include hover-link; }
 
-.main   { @extend .sans;  }
-.header { @extend .serif; }
-.nav    { @extend .serif; }
-.aside  { @extend .sans;  }
-.code   { @extend .mono;  }
+.main    { @extend .sans;  }
+.header  { @extend .serif; }
+.nav     { @extend .serif; }
+.aside   { @extend .sans;  }
+.code_cl { @extend .mono;  }
 
-.main, .code { a { font-weight : bold; } }
+.main, .code_cl { a { font-weight : bold; } }
 .header, .nav, .aside { a { font-weight : normal } }
 
 .nav { @include adjust-font-size-to(.9*$base-font-size); }
@@ -28,12 +28,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 pre {
-  @extend .code;
-  header, h1, h2, h3, h4, h5, h6 { @extend .code; }
+  @extend .code_cl;
+  header, h1, h2, h3, h4, h5, h6 { @extend .code_cl; }
 }
 
 code, kbd, var, tt, samp { 
-  @extend .code; 
+  @extend .code_cl; 
   header, h1, h2, h3, h4, h5, h6 { @extend .header; }
 }
 

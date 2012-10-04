@@ -1,5 +1,9 @@
 .sans  { font-family : Ubuntu, $sans;      }
 .serif { font-family : Quando, $serif;     }
-.mono  { font-family : Electrolize, $mono; }
+.mono  { 
+  font-family : PT+Mono, $mono;
+  @include adjust-font-size-to(.9*$base-font-size);
+}
 
 .meta { @include adjust-font-size-to(.9*$base-font-size); }
+

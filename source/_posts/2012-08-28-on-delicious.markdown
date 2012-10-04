@@ -6,10 +6,7 @@ date     : 2012-08-28 14:28
 comments : true
 sharing  : true
 tldr     : I joined Delicious yesterday. For those of you living under a rock for the past decade, Delicious is the original social bookmarking web service.
-tags     : 
-- social networks
-- Octopress
-- Firefox
+tags     : social networks, Octopress, Firefox
 ---
 
 I joined [Delicious](http://www.delicious.com/) (formerly styled

@@ -6,10 +6,7 @@ date     : 2012-09-30 18:34
 comments : true
 sharing  : true
 tldr     : Humor in documentation is effective.
-tags     :
-- ruby
-- documentation
-- humor
+tags     : ruby, documentation, humor
 ---
 
 > Not guaranteed to work for you in the future. Use at your own

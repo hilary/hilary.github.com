@@ -12,34 +12,34 @@ for [Jekyll](https://github.com/mojombo/jekyll) pages based on
 
 ## contents {#toc}
 
-<ul class="toc">
- <li><a href="#leveraging_compass">leveraging Compass</a>
-  <ul><li><a href="#susy">Susy for responsive layout</a></li>
-  <li><a href="#vertical_rhythm">Vertical Rhythm for readability</a></li></ul>
- </li>
- <li><a href="#microdata">microdata</a></li>
- <li><a href="#convention">convention over configuration</a>
-  <ul><li><a href="#waldo">where's waldo?</a></li>
-  <li><a href="#tags">tags are not categories</a></li></ul>
- </li>
- <li><a href="#next">what's next?</a></li>
-</ul>
+ * [leveraging Compass](#leveraging-compass)
+   * [Susy for responsive layout](#susy-for-responsive-layout)
+   * [Vertical Rhythm for readability](#vertical-rhythm-for-readability)
+ * [microdata](#microdata)
+ * [convention over configuration](#convention-over-configuration)
+   * [where's waldo?](#wheres-waldo)
+   * [tags are not categories](#tags-are-not-categories)
+ * [what's next?](#whats-next)
 
-## <a name="leveraging_compass"></a>leveraging Compass
 
-### <a name="susy"></a>[Susy](http://susy.oddbird.net/) for responsive layout. 
+## leveraging Compass
 
-While doing a Susy design from scratch can present something of an
-initial learning curve, customizing an existing design is a joy. Want
-4 asides instead of 3 in your default layout? Allocate columns to each
-aside in `sass/asides/_default_layout.scss` and regenerate. You're done.
+### Susy for responsive layout. 
 
-### <a name="vertical_rhythm"></a>[Vertical Rhythm](http://compass-style.org/reference/compass/typography/vertical_rhythm/) for readability
+While doing a [Susy](http://susy.oddbird.net/) design from scratch can
+present something of an initial learning curve, customizing an
+existing design is a joy. Want 4 asides instead of 3 in your default
+layout? Allocate columns to each aside in
+`sass/asides/_default_layout.scss` and regenerate. You're done.
+
+### Vertical rhythm for readability
 
 Vertical rhythm refers to the way text flows down a page. The core of
-Compass's Vertical Rhythm library is the ability to adjust both
-font-size and line-height with a single call. The `establish-baseline`
-mixin is integrated with other Compass libraries such as Susy.
+Compass's
+[Vertical Rhythm](http://compass-style.org/reference/compass/typography/vertical_rhythm/)
+library is the ability to adjust both font-size and line-height with a
+single call. The `establish-baseline` mixin is integrated with other
+Compass libraries such as Susy.
 
 ### and many more
 
@@ -58,10 +58,11 @@ Comprehensive libraries such as Susy and Vertical Rhythm make it possible
 to achieve in days what used to take a week. They also make implementing
 changes fun as opposed to mildly terrifying.
 
-## <a name="microdata"></a>[microdata](http://schema.org/)
+## microdata
 
-Octoburn's markup uses relevant microdata schemas. A set of microdata liquid
-filters is included as a plugin for easy template customization.
+Octoburn's markup uses relevant [microdata](http://schema.org/)
+schemas from schema.org. A set of microdata liquid filters is included
+as a plugin for easy template customization.
 
 Microdata is critical to having your information correctly indexed by
 the major search engines. A new set of extremely promising schemas for
@@ -72,9 +73,9 @@ is challenging. Many elements can legitimately be marked up in
 multiple ways depending on context. I often find that ambiguous
 elements resolve themselves as I work through a schema.
 
-## <a name="convention"></a>convention over configuration
+## convention over configuration
 
-### <a name="waldo"></a>where's waldo?
+### where's waldo?
 
 I spend a lot of my time in Rails; one of the strengths of the Rails
 architecture is how easy it is to find
@@ -89,7 +90,7 @@ Consider, for example, the follow menu at the top of each page:
 (There's more to the Sass import design, but a proper treatment would
 be a full post.) 
 
-### <a name="tags"></a>tags are not categories
+### tags are not categories
 
 Octoburn offers built-in support for tags: automatically generated 
 tag pages, liquid filters for a single tag link and a full set of
@@ -97,7 +98,7 @@ tag links and automatically generated tag feeds. I am currently reviewing
 several of the existing Jekyll tag cloud plugins to see if one of them
 will do.
 
-## <a name="next"></a>what's next?
+## what's next?
 
 While I have lots of plans for Octoburn, my next step is to turn it
 into a gem. Hi, my name is Hilary, and I addicted to agile software

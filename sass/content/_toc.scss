@@ -1,7 +1,8 @@
-.toc {
+#toc + ul {
 
   li {
-    margin : { top : .4em; bottom : .4em; }
+    margin : { top : .2em; bottom : .2em; }
+    a { font-weight : normal; }
 
     > ul {
       margin : { top : 0; bottom : 0; }

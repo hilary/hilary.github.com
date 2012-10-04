@@ -2,7 +2,7 @@ aside.github {
 
   > ul > li {
     
-    a { @extend .code }
+    a { @extend .code_cl }
 
     p {
       @include adjust-font-size-to(.9*$aside-font-size, .8*$aside-lines);

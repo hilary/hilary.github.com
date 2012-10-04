@@ -1,15 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
 require "rubygems"
 require "bundler/setup"
 require "stringex"
 require 'rake/minify'
 
-deploy_default = "push"
+deploy_default  = "push"
 
 # Hidden "dot" files that should be included with the deployed site (see task copydot)
-copy_dot_files = []
+copy_dot_files  = []
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "master"
+deploy_branch   = "master"
 
 ## -- Misc Configs -- ##
 

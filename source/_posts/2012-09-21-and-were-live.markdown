@@ -1,3 +1,4 @@
+# -*- mode: markdown -*-
 ---
 layout       : post
 title        : "and we're live"

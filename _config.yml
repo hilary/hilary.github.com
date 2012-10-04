@@ -61,8 +61,12 @@ destination    : public
 plugins        : plugins
 code_dir       : downloads/code
 
-#-- processing content
+#-- https://github.com/mojombo/jekyll/blob/master/lib/jekyll/converters/markdown.rb
 markdown       : kramdown
+kramdown       :
+  enable_coderay : true
+  toc_levels     : [1,2,3,4]
+
 pygments       : false
 
 # ------------------------------------------------------------------------------

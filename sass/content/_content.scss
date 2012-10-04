@@ -28,6 +28,7 @@ $type-border      : lighten($text-color, 11);
 @import 'article-excerpt';
 @import 'page-nav';
 @import 'solarized';
+@import 'included_code';
 
 // page specific files
 @import 'index';

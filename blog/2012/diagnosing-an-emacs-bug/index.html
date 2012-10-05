@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+<title>diagnosing an emacs bug ( integrating design )</title>
+
+
+  <meta name="author" content="hilary j holz">
+  <meta name="Generator" content="Octoburn (http://hholz.com/octoburn/)">
+  
+<meta name="description" content="coding blog by full stack web dev">
+
+  
+  <meta name="keywords" content="bug report, emacs, and stack overflow">
+
+
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<link rel="canonical" href="http://hholz.com/blog/2012/diagnosing-an-emacs-bug/">
+
+  
+<link href="/stylesheets/default.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+
+  <link href="feeds/integrating_design.xml" rel="alternate" title="integrating design" type="application/atom+xml">
+
+  <link href="http://fonts.googleapis.com/css?family=Quando|PT+Mono|Ubuntu:300" rel="stylesheet" type="text/css">
+
+  <link href="/favicon.png" rel="icon">
+</head>
+
+<body itemscope 
+      itemtype="http://schema.org/Blog">
+  <div id="grid">
+    <header>
+  <div class="banner">
+    <hgroup>
+      <h1 itemprop="headline">integrating design</h1>
+      <h2 itemprop="alternativeHeadline">your friendly native guide</h2>
+    </hgroup>
+    <menu type="list" label="follow" role="menubar">
+  <li class="delicious-follow">
+    <a title="delicious" 
+       target="_blank"
+       href="https://www.delicious.com/settings/networkedit?action=add&username=hilzh&jump=/hilzh" ><img src="/images/icon/delicious.png"
+               alt="delicious"></a></li>
+  <li class="rss-follow">
+    <a href="feeds/integrating_design.xml" 
+       target="_blank"
+       rel="subscribe-rss" 
+       title="subscribe via RSS"><img src="/images/icon/rss.png" 
+                                      alt="rss"></a></li>
+  <li class="googleplus-follow">
+    <a title="googleplus"
+       target="_blank"
+       href="https://plus.google.com/holz.hilary@gmail.com?rel=author"><img 
+               src="/images/icon/googleplus.png" alt="googleplus"></a></li>
+  <li class="github-follow">
+    <a title="github"
+       target="_blank"
+       href="https://github.com/users/follow?target=hilary" 
+       alt="Github icon"><img src="/images/icon/github.png" 
+                              alt="github"></a></li>
+</menu>
+
+  </div>
+  <div class="primary-navigation">
+  <section class="simple-search">
+  <form action="http://google.com/search" method="get">
+    <fieldset role="search">
+      <input type="hidden" name="q" value="site:hholz.com" />
+      <input class="search" type="text" name="q" results="0" placeholder="search"/>
+    </fieldset>
+  </form>
+</section>
+
+  <nav class="primary-navlist" role="navigation">
+  <ul>
+    <li><a href="/" itemprop="relatedLink">home</a></li>
+    <li><a href="/octoburn/" 
+           itemprop="relatedLink">octoburn</a></li>
+    <li><a href="/blog/" itemprop="relatedLink">blog</a></li>
+    <li><a href="/archives/" 
+           itemprop="relatedLink">archives</a></li>
+  </ul>
+</nav>
+
+</div>
+
+</header>
+
+    <article class="main-content">
+      <article class="content" itemscope 
+         itemtype="http://schema.org/BlogPosting"
+         role="article">
+  <header>
+    <time datetime="2012-10-03T19:26:00-07:00" itemprop="datePublished">October 3<span>rd</span> 2012</time><a rel="bookmark" href="http://hholz.com/blog/2012/diagnosing-an-emacs-bug/" itemprop="url">permalink</a><nav class="tag-links"><ul><li><a rel="tag" href="/tag/bug-report.html"><span itemprop="keywords">bug report</span></a></li><li><a rel="tag" href="/tag/emacs.html"><span itemprop="keywords">emacs</span></a></li><li><a rel="tag" href="/tag/stack-overflow.html"><span itemprop="keywords">stack overflow</span></a></li></ul></nav>
+    <h1 itemprop="headline" class="page-title">diagnosing an emacs bug</h1>
+
+    
+  <menu type="list" label="share">
+    <li class="twitter-share">
+      <a href="http://twitter.com/share" 
+         title="tweet" 
+         target="_blank"><img src="/images/icon/twitter.png" 
+                              alt="twitter"></a></li>
+    <li class="googleplus-share">
+      <a title="+1 on Google Plus" 
+         href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://hholz.com/blog/2012/diagnosing-an-emacs-bug/" 
+         target="_blank"><img src="/images/icon/googleplus.png" 
+                              alt="+1 on Google Plus"></a></li>
+    <li class="facebook-share">
+      <a title="share on facebook" 
+         href="http://www.facebook.com/sharer.php?u=http://hholz.com/blog/2012/diagnosing-an-emacs-bug/" 
+         target="_blank"><img src="/images/icon/facebook.png" 
+                              alt="share on facebook"></a></li>
+  </menu>
+
+
+  </header>
+  <section itemprop="articleBody">
+    <p>Like all emacsen, I have shaped my emacs environment over the years
+until it fits me like a second skin. Recently an integral part of that
+environment broke. After painstaking (painful?) diagnosis, I
+determined that the cause was an emacs bug and came up with a
+workaround. Lastly, I filed my first emacs bug report!<!--more--></p>
+
+<h2 id="toc">contents</h2>
+
+<ul>
+  <li><a href="#problem">problem</a> Shell Switcher mode Customize settings stopped
+persisting across emacs sessions</li>
+  <li><a href="#symptoms">symptoms</a></li>
+  <li><a href="#hunt-and-gather">hunt and gather</a></li>
+  <li><a href="#diagnosis">diagnosis</a>
+    <ul>
+      <li><a href="#approach">approach</a> internal fault model + sketch</li>
+      <li><a href="#question">question</a> Do Shell Switcher mode customizations persist 
+across emacs sessions if there are no changes made outside
+<code>custom-set-variables</code>?</li>
+      <li><a href="#plan-sketch">plan (sketch)</a></li>
+      <li><a href="#action">action</a></li>
+      <li><a href="#outcome">outcome</a> No</li>
+      <li><a href="#drill-down">drill down</a>
+        <ul>
+          <li><a href="#question-1">question</a> Do Shell Switcher mode customizations 
+persist across emacs sessions if no other customizations are 
+made in <code>.emacs</code>?</li>
+          <li><a href="#plan">plan</a></li>
+          <li><a href="#action-1">action</a></li>
+          <li><a href="#outcome-1">outcome</a> No</li>
+          <li><a href="#question-2">question</a> Do Shell Switcher mode settings set
+outside of Customize persist across sessions?</li>
+          <li><a href="#plan-1">plan</a></li>
+          <li><a href="#action-2">action</a></li>
+          <li><a href="#outcome-2">outcome</a> Yes. Shell Switcher settings persist</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#bug-report">bug report</a></li>
+</ul>
+
+<h2 id="problem">problem</h2>
+
+<p>My Shell Switcher mode Customize settings stopped persisting across
+emacs sessions. I’ve used Shell Switcher for a long time without any
+problems, then *poof*, the Customize settings stopped working. The
+Shell Switcher related key bindings</p>
+
+<pre><code>(global-set-key (kbd "C-'") 'shell-switcher-switch-buffer)
+(global-set-key (kbd "C-x 4 '") 'shell-switcher-switch-buffer-other-window)
+</code></pre>
+
+<p>I set outside of Customize in <code>.emacs</code> persisted across sessions, but
+the Shell Switcher settings</p>
+
+<pre><code>'(shell-switcher-mode t)
+'(shell-switcher-new-shell-function (quote shell-switcher-make-shell))
+</code></pre>
+
+<p>set through Customize did not. Once I used the Customize interface to set 
+the settings during a session they would stay set, however, when I quit
+emacs and restarted later, the settings were no longer effective.</p>
+
+<p>The Shell Switcher <em>entries</em> in Customize’s <code>custom-set-variables</code> in
+<code>.emacs</code> were still present (and had not changed from when they had been
+effective), they just did not control Shell Switcher’s behavior.</p>
+
+<p>My install: GNU Emacs 24.1.50.2 (i386-apple-darwin11.4.0, NS
+apple-appkit-1138.47) of 2012-05-15.</p>
+
+<h2 id="symptoms">symptoms</h2>
+
+<p>In a new emacs setting, <code>C-'</code> (switch buffer) triggered Shell Switcher:</p>
+
+<pre><code>No active shell buffer, create new one? (y or n)
+</code></pre>
+
+<p>So far so good, that’s one of the key bindings I set in <code>.emacs</code>. But
+when I responded <code>y</code>, I could see Shell Switcher loading (it should
+already have done that when I started emacs).</p>
+
+<p>Far more blatant, though, was that the buffer it launched was running 
+the wrong shell: it came up in emacs shell.</p>
+
+<p>Unlike <code>custom-set-variables</code> in <code>.emacs</code>, <code>Customize Apropos</code>
+shell-switcher displayed the values for the two settings that matched
+their behavior in a new emacs session:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">setting</th>
+      <th style="text-align: left">value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code>shell-switcher-mode</code></td>
+      <td style="text-align: left"><code>nil</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code>shell-switcher-new-shell-function</code></td>
+      <td style="text-align: left"><code>shell-switcher-make-eshell</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Stranger still, both settings had <code>State: CHANGED outside Customize</code></p>
+
+<p>If I used Customize to set the values they would take and stay set
+for that session. When next I launched emacs, however, they were
+gone.</p>
+
+<h2 id="hunt-and-gather">hunt and gather</h2>
+
+<p><em>skip this section if you aren’t into software journaling</em></p>
+
+<p>When this happened I was mystified. I discovered something was wrong
+when hitting <code>C-'</code> one day produced a buffer running the wrong shell.
+I was deep in the midst of coding and wasn’t going to drop everything
+in order to diagnose a different problem: I reset the setting, made a
+note of what had happened and got back to work.</p>
+
+<p>Several days later, when I got my first chance to look at what was 
+wrong, I could not identify any change in my emacs configuration that
+might have caused the problem. I had not made any recent changes
+except that I had started using the built-in irc client, erc. Nothing
+unusual showed up in the Messages buffer. Running emacs with the 
+debug switch didn’t shed any light.</p>
+
+<p>The <code>CHANGED outside Customize</code> thing really threw me. Was one of the
+other packages, perhaps one that was a major mode, meddling with Shell
+Switcher, which is, after all, a minor mode? I dug around the emacs
+world for insight (emacswiki and friends), looked on
+<a href="http://stackoverflow.com/">stack</a>, consulted the great oracle
+of Google. I couldn’t find anything (usually I can at least find
+something that shakes my thinking loose so I can solve the problem).</p>
+
+<p>In the end I wrote my first
+<a href="http://stackoverflow.com/questions/12536790/emacs-shell-switcher-customizations-being-overridden">question</a>
+on stack. When I didn’t get any answers to my question after
+a day or so, I followed their advice and posted a link to it to
+my Facebook feed. The discussion that followed was helpful in
+that it validated that the solution was not obvious, lol.</p>
+
+<p>I had projects that took priority. Time passed. I earned my
+fourth stack badge: <a href="http://stackoverflow.com/badges/63/tumbleweed">tumbleweed</a>.</p>
+
+<h2 id="diagnosis">diagnosis</h2>
+
+<h3 id="approach">approach</h3>
+
+<p>When I finally made a few hours to tackle the problem, I used
+an <a href="http://blogs.msdn.com/b/james_whittaker/">internal fault model</a>.</p>
+
+<p>I developed an initial question and sketched out a plan based on 
+possible outcomes. The ideal question:</p>
+
+<ul>
+  <li>is testable without undue work;</li>
+  <li>directly addresses the problem;</li>
+  <li>has seperable, easy to detect, concrete outcomes;</li>
+  <li>and moves the solution forwards regardless of outcome.</li>
+</ul>
+
+<p>I don’t require questions to have yes or no answers; it’s more
+valuable to have a question that reflects the underlying information
+architecture.  The sketch of the plan addresses any difficulties with
+not having yes/no answers, as it clearly identifies what each of the
+outcomes mean. The sketch is a sketch because it makes no sense to
+have some abstract, methodological requirement that an engineer expend
+resources fleshing out many branches when only one will be
+realized. That’s what judgment is for, and methodology should support
+judgment, not hamper it.</p>
+
+<p>A second realm in which the engineer’s judgment is critical comes in
+weighing the relative importance of the listed criteria in context. As
+we don’t function in an ideal world, we often have to trade-off one
+criteria with other(s). Note that context is wildly situational, as an
+engineer makes progress diagnosing a problem the relative importance
+of the criteria may change, even in the same problem. Perhaps the
+easiest case to see is when, upon initial exploration, what appeared
+to be a minor annoyance turns out to be a symptom of a deep-seated
+problem. At that point, the definition of ‘undue’ shifts.</p>
+
+<h3 id="question">question</h3>
+
+<blockquote>
+  <p>Do Shell Switcher mode customizations persist across emacs sessions
+if there are no changes made outside <code>custom-set-variables</code>?</p>
+</blockquote>
+
+<h3 id="plan-sketch">plan (sketch)</h3>
+
+<p>Possible outcomes and associated next steps:</p>
+
+<ul>
+  <li>
+    <p>Neither customization persists.</p>
+
+    <p>This outcome would indicate:</p>
+
+    <ul>
+      <li>that whatever was causing the setting to be rewritten was less
+to be a result of some other package interfering with the Shell
+Switcher mode settings</li>
+      <li>a bug in customize (the <code>CHANGED outside Customize</code> flag setting)
+As I was sketching out the plan, I remembered an answer I had seen
+on stack to a question concerning in Customize; the
+<a href="http://stackoverflow.com/questions/10042639/what-does-saved-and-set-mismatch-and-in-particular-the-mismatch-part-me">answer</a>
+had identified a bug in Customize associated with the same flag. I
+went digging for the question, while it did not shed light
+directly on my problem, it certainly helped with the fault model!</li>
+    </ul>
+
+    <p>In the case of this outcome, I could see two routes to follow:</p>
+
+    <ol>
+      <li>Comment out all entries in <code>custom-set-variables</code> except for
+the Shell Switcher entries to check for packages affecting 
+Shell Switcher programmatically, after all, if this path
+proved true I was also looking at two bugs.</li>
+      <li>Move <em>all</em> the Shell Switcher configuration outside of Customize
+in my <code>.emacs</code> and see if it persisted across sessions. If
+so, at the least I would have a viable workaround. Less
+diagnostic value than the previous step, though.</li>
+    </ol>
+  </li>
+  <li>
+    <p>Both customizations persist.</p>
+
+    <p>The inverse case; this outcome would suggest that something in
+my <code>.emacs</code> customizations was causing the problem.</p>
+
+    <p>In this case, I would look for candidates to reintroduce that might
+be responsible. If all else failed, I could binary search my way through
+the list to find the culprit.</p>
+  </li>
+  <li>
+    <p>The intermediate cases: Shell Switcher mode stays enabled but the
+buffer is launched in the wrong shell, or the buffer launches in the
+right shell but Shell Switcher mode is disabled.</p>
+
+    <p>Neither case seemed either remotely likely. With not one, but two
+cases that fit my fault model, I decided not to put resources towards
+researching potential causes and paths for the intermediate cases.</p>
+  </li>
+</ul>
+
+<h3 id="action">action</h3>
+
+<p>As I organized my <code>.emacs</code> into separate files by topic long ago, I
+could turn off customizations outside of <code>custom-set-variables</code> 
+by commenting out a few <code>load</code> statements:</p>
+
+<pre><code>; (load "~/.emacs.d/hilz_config/tramp.el")
+; (load "~/.emacs.d/hilz_config/ruby_extensions.el")
+; (load "~/.emacs.d/hilz_config/shell_switcher.el")
+; (load "~/.emacs.d/hilz_config/personalize.el")
+</code></pre>
+
+<p>Then I used the Customize interface to</p>
+
+<ul>
+  <li>enable Shell Switcher mode</li>
+  <li>set <code>shell-switcher-new-shell-function</code> to <code>shell-switcher-make-shell</code></li>
+</ul>
+
+<p>and hit <code>Apply and Save</code>. I opened <code>.emacs</code> and verified the presence of</p>
+
+<pre><code>'(shell-switcher-mode t)
+'(shell-switcher-new-shell-function (quote shell-switcher-make-shell))
+</code></pre>
+
+<p>towards the end of the <code>custom-set-variables</code> entry. I restarted emacs.</p>
+
+<h3 id="outcome">outcome</h3>
+
+<blockquote>
+  <p>No, the customizations were lost.</p>
+</blockquote>
+
+<p>As I no longer was defining the key bindings, I now had to use <code>M-x
+shell-switcher-new-shell</code> to test Shell Switcher.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>  When I did, the
+behavior I observed was the same as before: Shell Switcher loaded when
+I used the command and the buffer came up in the wrong shell.</p>
+
+<p>I looked in <code>.emacs</code>. The entries were still present in
+<code>custom-set-variables</code>. I invoked Customize and saw what I’ve been
+seeing all along:</p>
+
+<ul>
+  <li>the values for the Shell Switcher variables did not match the values
+set in the <code>custom-set-variables</code> entry</li>
+  <li>the Shell Switcher variables were shown as being in state <code>CHANGED
+outside Customize</code>.</li>
+</ul>
+
+<p>No change.</p>
+
+<h3 id="drill-down">drill down</h3>
+
+<p>As the question appeared to me to have more diagnostic value, I started with</p>
+
+<h4 id="question-1">question</h4>
+
+<blockquote>
+  <p>Do Shell Switcher mode customizations persist across emacs sessions
+if no other customizations are made in <code>.emacs</code>?</p>
+</blockquote>
+
+<h4 id="plan">plan</h4>
+
+<p>Whichever outcome I got, I intended to move on to my second question from my
+original plan next, as I needed a workaround and had spent quite a bit of time
+on the issue that day by then (I kept notes, which I later expanded to this
+post). If the Shell Switcher mode customizations persisted across emacs 
+sessions when all the other customizations were commented out, then I would
+return at a later date and tackle the issue as I would have had one of my
+own customizations proven responsible.</p>
+
+<h4 id="action-1">action</h4>
+
+<p>I commented out everything under <code>custom-set-variables</code> other than the
+Shell Switcher mode settings. Even the basic options: inhibiting the
+startup screen, the initial scratch message and the like.</p>
+
+<p>This is the first time I have encountered a project that might justify
+setting up a full development environment for emacs. Were I not in the
+middle of job interviews, I would have been tempted to take the time to
+build one so that I could approach this issue as I would a ruby project.
+I’ve looked at the tools for emacs before, but lack the community to
+work with that is such a critical part of accelerating learning. Gah.</p>
+
+<h4 id="outcome-1">outcome</h4>
+
+<blockquote>
+  <p>No</p>
+</blockquote>
+
+<p>Ok. Is this a bug in Customize that runs deeper than a cosmetic issue
+(displaying the wrong flag setting)? Or is there something wrong with 
+Shell Switcher? Or, of course, an interaction between the two…</p>
+
+<p>On to the next step of my plan, and hopefully a workaround.</p>
+
+<h4 id="question-2">question</h4>
+
+<blockquote>
+  <p>Do Shell Switcher mode settings set outside of Customize persist
+across sessions?</p>
+</blockquote>
+
+<p>By that I mean do I encounter the same problem if I use</p>
+
+<pre><code>(setq shell-switcher-mode t)
+(setq shell-switcher-new-shell-function 'shell-switcher-make-shell)
+</code></pre>
+
+<p>instead of the Customize interface. Given the results I had seen so
+far, I rather expected the settings to persist.</p>
+
+<h4 id="plan-1">plan</h4>
+
+<p>If the settings did not persist, it would suggest a problem with Shell
+Switcher mode. (My first step when the settings stopped persisting had
+been to read the code for the mode, but nothing had jumped out at me.)</p>
+
+<p>If, on the other hand, the settings did not persist, it would suggest
+that the problem rested with customize. Shell Switcher is a minor mode
+that behaves somewhat differently from most minor modes, it isn’t really
+surprising that it might break more easily.</p>
+
+<h4 id="action-2">action</h4>
+
+<p>I:</p>
+
+<ul>
+  <li>re-enabled my other customizations in <code>custom-set-variables</code> so that
+emacs was not ghastly to work in</li>
+  <li>took the Shell Switcher lines out of <code>custom-set-variables</code></li>
+  <li>added the <code>setq</code> lines listed in the previous section to <code>.emacs</code>
+after <code>custom-set-variables</code></li>
+  <li>restarted emacs.</li>
+</ul>
+
+<h4 id="outcome-2">outcome</h4>
+
+<blockquote>
+  <p>Yes. Shell Switcher settings persist.</p>
+</blockquote>
+
+<p>Ahah! A workaround! And lots of info for the customize folks. Seems
+awfully likley that this problem is another symptom of an underlying
+defect that caused the issue discussed in the stack question I had
+noticed, despite the differences between the two. Or perhaps not: the
+other user’s settings did persist.</p>
+
+<h2 id="bug-report">bug report</h2>
+
+<p>I’ve never done this before. Ah well, nothing ventured…</p>
+
+<pre><code>M-x report-emacs-bug
+
+Bug Subject: Customize is borked!
+</code></pre>
+
+<p>Hmmmm…. maybe not.</p>
+
+<pre><code>Bug Subject: Shell Switcher mode customization not persisted across sessions
+</code></pre>
+
+<p>Phew! I’m in a buffer with instructions and useful information.</p>
+
+<pre><code>Please describe exactly what actions triggered the bug, and the
+precise symptoms of the bug.
+</code></pre>
+
+<p>Somehow I think I’ve got that one covered. I’m not sure if it’s kosher
+to point them at a blog post, but all I can do is ask. If they want me
+to cut-n-paste, I can resubmit, I suppose. </p>
+
+<p>Information about running emacs in debug mode, nice to know I started
+out the way that makes sense. A lot of interesting new stuff too! Ah,
+pointer to the manual section on how to write an emacs bug report.
+Must. Read.</p>
+
+<p>I navigate to the Known Problems file; despite decades of using emacs
+as my daily dev environment, I have never seen this before. I convert
+the file to outline mode (<code>C-c C-t</code>), while I don’t find anything
+remotely similar to my problem, I can’t help but laugh as I skim by
+problems I’ve had with various installations of emacs. I wonder if
+those were known problems at the time?</p>
+
+<p>As I read through the entry on bug reporting, I can see how my
+approach is on target as well as ways I can improve it. After a bit
+of internal grumbling, I sort out a minimal path to reproduce the bug.
+I stash a copy of <code>.emacs</code> and delete <code>.emacs</code>.</p>
+
+<p>I realize that one thing I have never made explicit is that <code>M-x shell</code>
+has worked perfectly all along.</p>
+
+<p>I launch vim, lol, so I can edit this post and record every step and 
+keystroke I make. Yes, emacs
+is recording, too, but nothing beats making notes by hand for realizing
+what you’ve missed.</p>
+
+<p>Steps to cause the bug:</p>
+
+<ol>
+  <li><code>M-x customize-apropos&lt;RET&gt;shell-switcher</code></li>
+  <li>set <code>shell-switcher-new-shell-function</code> to <code>shell-switcher-make-shell</code></li>
+  <li>set <code>shell-switcher-mode</code> to <code>on</code></li>
+  <li>
+    <p>click on <code>Apply and Save</code></p>
+
+    <p><em>above steps create <code>.emacs</code> containing exactly</em></p>
+
+    <p>(custom-set-variables
+    ;; custom-set-variables was added by Custom.
+    ;; If you edit it by hand, you could mess it up, so be careful.
+    ;; Your init file should contain only one such instance.
+    ;; If there is more than one, they won’t work right.
+    ‘(shell-switcher-mode t)
+    ‘(shell-switcher-new-shell-function (quote shell-switcher-make-shell))
+    )</p>
+
+    <p>(custom-set-faces
+    ;; custom-set-faces was added by Custom.
+    ;; If you edit it by hand, you could mess it up, so be careful.
+    ;; Your init file should contain only one such instance.
+    ;; If there is more than one, they won’t work right.
+    )</p>
+  </li>
+  <li>quit emacs</li>
+  <li>launch emacs: in this case /Applications/Emacs.app/Contents/MacOS/Emacs</li>
+  <li><code>M-x shell-switcher-new-shell</code> (launches buffer in eshell)</li>
+  <li><code>M-x customize-apropos&lt;RET&gt;shell-switcher</code> (CHANGED outside Customize)</li>
+  <li><code>C-x C-f ~/.emacs</code> (conflicting customize settings)</li>
+</ol>
+
+<p>now <code>M-x report-emacs-bug</code></p>
+
+<pre><code>Bug Subject: customize settings not persisting across sessions +
+  CHANGED outside Customize flag issue
+</code></pre>
+
+<p>Geez, I hate to use that long a subject but they really emphasize ‘just-the-facts-mam’
+so I’m trying to avoid anything that comes close to guessing causes. Given that one
+goes at software testing using internal fault models, that’s a really tough discipline
+to follow.</p>
+
+<p>Fill in the steps. Come back here, run generate and deploy on this post so I
+can refer to it in the bug report, and submit.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><code>M-x describe-mode</code> has only listed Shell Switcher <em>after</em> the first time I invoke it in the time I’ve been using it, rendering the command useless as a diagnostic tool for this problem.<a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </section>
+  <nav class="tag-links"><ul><li><a rel="tag" href="/tag/bug-report.html"><span itemprop="keywords">bug report</span></a></li><li><a rel="tag" href="/tag/emacs.html"><span itemprop="keywords">emacs</span></a></li><li><a rel="tag" href="/tag/stack-overflow.html"><span itemprop="keywords">stack overflow</span></a></li></ul></nav>
+  
+  <menu type="list" label="share">
+    <li class="twitter-share">
+      <a href="http://twitter.com/share" 
+         title="tweet" 
+         target="_blank"><img src="/images/icon/twitter.png" 
+                              alt="twitter"></a></li>
+    <li class="googleplus-share">
+      <a title="+1 on Google Plus" 
+         href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://hholz.com/blog/2012/diagnosing-an-emacs-bug/" 
+         target="_blank"><img src="/images/icon/googleplus.png" 
+                              alt="+1 on Google Plus"></a></li>
+    <li class="facebook-share">
+      <a title="share on facebook" 
+         href="http://www.facebook.com/sharer.php?u=http://hholz.com/blog/2012/diagnosing-an-emacs-bug/" 
+         target="_blank"><img src="/images/icon/facebook.png" 
+                              alt="share on facebook"></a></li>
+  </menu>
+
+
+  
+  <nav class="page-nav" role="navigation">
+    
+      <a rel="prev"
+         href="/blog/2012/doc-of-the-day/" 
+         title="previous: doc of the day">&laquo; doc of the day</a>
+    
+    
+  </nav>
+
+
+  
+  <section itemprop="comment" 
+           itemscope 
+           itemtype="http://schema.org/UserComments">
+    <h1>Comments</h1>
+    <section id="disqus_thread" aria-live="polite">
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  </section>
+
+
+</article>
+
+
+      
+  <section class="default-aside aside-base">
+  
+
+
+
+<aside class="recent-posts">
+  <h1>recent posts</h1>
+  <nav><ul>
+    
+      <li><a href="/blog/2012/diagnosing-an-emacs-bug/">diagnosing an emacs bug</a></li>
+    
+      <li><a href="/blog/2012/doc-of-the-day/">doc of the day</a></li>
+    
+      <li><a href="/blog/2012/and-were-live/">and we're live</a></li>
+    
+      <li><a href="/blog/2012/deploying-octopress-on-github/">repository naming for Octopress on Github</a></li>
+    
+      <li><a href="/blog/2012/on-delicious/">on delicious, finally</a></li>
+    
+  </ul></nav>
+</aside>
+
+  <aside class="github">
+  <h1>github</h1>
+  <ul id="gh_repos" data-user="hilary" data-count="4" data-skip="true">
+    <li class="loading">Status updating...</li>
+  </ul>
+</aside>
+
+  <aside class="delicious">
+  <h1>bookmarks</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/hilzh?count=6&amp;sort=date&amp;callback=octopress.renderDeliciousLinks"></script>
+</aside>
+
+</section>
+
+
+
+    </article>
+    <div id="credits"></div>
+  </div>
+  <footer class="credits" id="contentinfo" role="contentinfo">
+  <div> 
+    <a rel="license" href="/copyright/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/80x15.png" /></a> by <span itemprop="author">hilary j holz</span>
+    <span class="generator">powered by <a href="http://hholz.com/octoburn/">Octoburn</a></span>
+  </div>
+</footer>
+
+  
+<script type="text/javascript">
+  var disqus_shortname = 'integrating';
+  var disqus_developer = 0;
+  
+    var disqus_identifier = 'http://hholz.com/blog/2012/diagnosing-an-emacs-bug/';
+    var disqus_url = 'http://hholz.com/blog/2012/diagnosing-an-emacs-bug/';
+    var disqus_script = 'embed.js';
+  
+  (function () {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }());
+</script>
+
+
+</body>
+</html>

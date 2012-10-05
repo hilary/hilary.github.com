@@ -3,22 +3,10 @@
   <title><![CDATA[integrating design: tag: documentation]]></title>
   <link href="http://hholz.com//documentation.xml" rel="self"/>
   <link href="http://hholz.com"/>
-  <updated>Liquid error: undefined method `xmlschema' for "2012-09-30 20:57":String</updated>
+  <updated>Liquid error: undefined method `xmlschema' for "2012-10-05 14:25":String</updated>
   <id>http://hholz.com/</id>
 <author><name><![CDATA[hilary j holz]]></name></author>
 <generator uri="http://hholz.com/octoburn/">Octoburn</generator>
-
-
-  
-    <entry>
-  
-  
-  <title type="html"><![CDATA[doc of the day]]></title>
-  <link href="http://hholz.com/blog/2012/doc-of-the-day/"/>
-  <updated>2012-09-30T18:34:00-07:00</updated>
-  <id>http://hholz.com/blog/2012/doc-of-the-day</id>
-  <content type="html"><![CDATA[Liquid error: undefined method `gsub' for nil:NilClass]]></content>
-</entry>
 
 
   

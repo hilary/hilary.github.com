@@ -30,7 +30,7 @@
 
   <link href="feeds/integrating_design.xml" rel="alternate" title="integrating design" type="application/atom+xml">
 
-  <link href="http://fonts.googleapis.com/css?family=Quando|Electrolize|Ubuntu:300" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Quando|PT+Mono|Ubuntu:300" rel="stylesheet" type="text/css">
 
   <link href="/favicon.png" rel="icon">
 </head>
@@ -127,34 +127,41 @@ for <a href="https://github.com/mojombo/jekyll">Jekyll</a> pages based on
 
 <h2 id="toc">contents</h2>
 
-<ul class="toc">
- <li><a href="#leveraging_compass">leveraging Compass</a>
-  <ul><li><a href="#susy">Susy for responsive layout</a></li>
-  <li><a href="#vertical_rhythm">Vertical Rhythm for readability</a></li></ul>
- </li>
- <li><a href="#microdata">microdata</a></li>
- <li><a href="#convention">convention over configuration</a>
-  <ul><li><a href="#waldo">where&#8217;s waldo?</a></li>
-  <li><a href="#tags">tags are not categories</a></li></ul>
- </li>
- <li><a href="#next">what&#8217;s next?</a></li>
+<ul>
+  <li><a href="#leveraging-compass">leveraging Compass</a>
+    <ul>
+      <li><a href="#susy-for-responsive-layout">Susy for responsive layout</a></li>
+      <li><a href="#vertical-rhythm-for-readability">Vertical Rhythm for readability</a></li>
+    </ul>
+  </li>
+  <li><a href="#microdata">microdata</a></li>
+  <li><a href="#convention-over-configuration">convention over configuration</a>
+    <ul>
+      <li><a href="#wheres-waldo">where’s waldo?</a></li>
+      <li><a href="#tags-are-not-categories">tags are not categories</a></li>
+    </ul>
+  </li>
+  <li><a href="#whats-next">what’s next?</a></li>
 </ul>
 
-<h2 id="a-nameleveragingcompassaleveraging-compass"><a name="leveraging_compass"></a>leveraging Compass</h2>
+<h2 id="leveraging-compass">leveraging Compass</h2>
 
-<h3 id="a-namesusyasusyhttpsusyoddbirdnet-for-responsive-layout"><a name="susy"></a><a href="http://susy.oddbird.net/">Susy</a> for responsive layout.</h3>
+<h3 id="susy-for-responsive-layout">Susy for responsive layout.</h3>
 
-<p>While doing a Susy design from scratch can present something of an
-initial learning curve, customizing an existing design is a joy. Want
-4 asides instead of 3 in your default layout? Allocate columns to each
-aside in <code>sass/asides/_default_layout.scss</code> and regenerate. You’re done.</p>
+<p>While doing a <a href="http://susy.oddbird.net/">Susy</a> design from scratch can
+present something of an initial learning curve, customizing an
+existing design is a joy. Want 4 asides instead of 3 in your default
+layout? Allocate columns to each aside in
+<code>sass/asides/_default_layout.scss</code> and regenerate. You’re done.</p>
 
-<h3 id="a-nameverticalrhythmavertical-rhythmhttpcompass-styleorgreferencecompasstypographyverticalrhythm-for-readability"><a name="vertical_rhythm"></a><a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Vertical Rhythm</a> for readability</h3>
+<h3 id="vertical-rhythm-for-readability">Vertical rhythm for readability</h3>
 
 <p>Vertical rhythm refers to the way text flows down a page. The core of
-Compass’s Vertical Rhythm library is the ability to adjust both
-font-size and line-height with a single call. The <code>establish-baseline</code>
-mixin is integrated with other Compass libraries such as Susy.</p>
+Compass’s
+<a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">Vertical Rhythm</a>
+library is the ability to adjust both font-size and line-height with a
+single call. The <code>establish-baseline</code> mixin is integrated with other
+Compass libraries such as Susy.</p>
 
 <h3 id="and-many-more">and many more</h3>
 
@@ -173,10 +180,11 @@ run over by it!</p>
 to achieve in days what used to take a week. They also make implementing
 changes fun as opposed to mildly terrifying.</p>
 
-<h2 id="a-namemicrodataamicrodatahttpschemaorg"><a name="microdata"></a><a href="http://schema.org/">microdata</a></h2>
+<h2 id="microdata">microdata</h2>
 
-<p>Octoburn’s markup uses relevant microdata schemas. A set of microdata liquid
-filters is included as a plugin for easy template customization.</p>
+<p>Octoburn’s markup uses relevant <a href="http://schema.org/">microdata</a>
+schemas from schema.org. A set of microdata liquid filters is included
+as a plugin for easy template customization.</p>
 
 <p>Microdata is critical to having your information correctly indexed by
 the major search engines. A new set of extremely promising schemas for
@@ -187,9 +195,9 @@ is challenging. Many elements can legitimately be marked up in
 multiple ways depending on context. I often find that ambiguous
 elements resolve themselves as I work through a schema.</p>
 
-<h2 id="a-nameconventionaconvention-over-configuration"><a name="convention"></a>convention over configuration</h2>
+<h2 id="convention-over-configuration">convention over configuration</h2>
 
-<h3 id="a-namewaldoawheres-waldo"><a name="waldo"></a>where’s waldo?</h3>
+<h3 id="wheres-waldo">where’s waldo?</h3>
 
 <p>I spend a lot of my time in Rails; one of the strengths of the Rails
 architecture is how easy it is to find
@@ -206,7 +214,7 @@ possible for me to create a similar architecture in Octoburn.</p>
 <p>(There’s more to the Sass import design, but a proper treatment would
 be a full post.) </p>
 
-<h3 id="a-nametagsatags-are-not-categories"><a name="tags"></a>tags are not categories</h3>
+<h3 id="tags-are-not-categories">tags are not categories</h3>
 
 <p>Octoburn offers built-in support for tags: automatically generated 
 tag pages, liquid filters for a single tag link and a full set of
@@ -214,7 +222,7 @@ tag links and automatically generated tag feeds. I am currently reviewing
 several of the existing Jekyll tag cloud plugins to see if one of them
 will do.</p>
 
-<h2 id="a-namenextawhats-next"><a name="next"></a>what’s next?</h2>
+<h2 id="whats-next">what’s next?</h2>
 
 <p>While I have lots of plans for Octoburn, my next step is to turn it
 into a gem. Hi, my name is Hilary, and I addicted to agile software
@@ -263,6 +271,8 @@ development. I need my <abbr title="Behavior-Driven Development">BDD</abbr> tool
 <aside class="recent-posts">
   <h1>recent posts</h1>
   <nav><ul>
+    
+      <li><a href="/blog/2012/diagnosing-an-emacs-bug/">diagnosing an emacs bug</a></li>
     
       <li><a href="/blog/2012/doc-of-the-day/">doc of the day</a></li>
     

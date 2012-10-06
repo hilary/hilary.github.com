@@ -75,17 +75,19 @@ pygments       : false
 
 #-- jekyll-scholar
 scholar :
-  style          : ieee-w-url
-  locale         : en
+  style  : ieee
+  locale : en
 
-  sort_by        : none
-  order          : ascending
+  sort_by : year
+  order   : descending
 
-  source         : ./source/_publications
-  bibliography   : pubs.bib
+  source             : source/_bibliography
+  bibliography       : pubs.bib
+  bibliography_class : publications
 
-  details_dir    : publications
-  details_layout : publications.html
-  details_link   : full citation
+#  details_dir        : publications
+#  details_layout     : pub_detail.html
+#  details_link       : details
+#  details_link_class : pub_details
 
-  query: "@*" 
+  query : "@*"

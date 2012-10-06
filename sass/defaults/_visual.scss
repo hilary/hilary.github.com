@@ -2,9 +2,9 @@ body { cursor : auto !important; } // improve affordance of all widgets
 
 figure { margin : 0; } // margin missing: IE 7/8/9, Safari 5
 
-table { // Remove most spacing between table cells.
-  border-collapse : collapse;
-  border-spacing  : 0;
+table { // Leave some space in between cells. Duh.
+  border-collapse : separate;
+  border-spacing  : 1em 0;
 }
 
 img {

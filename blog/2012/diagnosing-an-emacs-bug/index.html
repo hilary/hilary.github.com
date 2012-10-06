@@ -167,6 +167,7 @@ outside of Customize persist across sessions?</li>
     </ul>
   </li>
   <li><a href="#bug-report">bug report</a></li>
+  <li><a href="#coda">coda</a> Fixed</li>
 </ul>
 
 <h2 id="problem">problem</h2>
@@ -623,6 +624,25 @@ to follow.</p>
 <p>Fill in the steps. Come back here, run generate and deploy on this post so I
 can refer to it in the bug report, and submit.</p>
 
+<h2 id="coda">Coda</h2>
+
+<p>The turn around from the emacs maintainer list was very fast. Seems it
+was one bug, local to Shell Switcher, and the bug had already been
+fixed in the
+<a href="http://github.com/DamienCassou/shell-switcher">current version</a> on
+github (last updated nine days ago, substantially after I started down
+this path, lol.) The fellows who responded gave some helpful examples
+of how these sorts of bugs trigger the CHANGED outside Customize flag.</p>
+
+<p>I find it interesting that I didn’t think to check the most recent
+version on github, given that it would normally be the first thing I
+would check in, say, a ruby build. Humbling, that. A really good
+reminder that we all have problems generalizing. </p>
+
+<p>I also couldn’t find anyway to directly source a package from a 
+github repo, akin to how one can in a Gemfile, making the current
+solution not particularly scalable. Although, ah, that’s what Chef
+is for. Sweet!</p>
 <div class="footnotes">
   <ol>
     <li id="fn:1">

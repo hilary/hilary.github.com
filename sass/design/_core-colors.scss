@@ -1,13 +1,17 @@
-$header-bg          : #1d2f2b;
-$title-color        : #f2f2f2;
-$subtitle-color     : lighten($header-bg, 65);
+$header-bg             : #1d2f2b;
+$title-color           : #f2f2f2;
+$subtitle-color        : lighten($header-bg, 65);
 
-$text-color         : #222;
-$content-bg         : #fafafa;
+$text-color            : #222;
+$content-bg            : #fafafa;
 
-$link-color         : #219cba; // good color, keep
-$link-color-visited : #527e89; // good color, keep
-$link-color-hover   : #55d2f1; // awful, has to go!
+$link-color            : #219cba; // good color, keep
+$link-color-visited    : #19778f; // good color, keep (#527e89)
+$link-color-hover      : #88563f; // awful, has to go!
+
+$credits-bg            : desaturate(lighten($header-bg, 18), 10);
+$credits-border-top    : lighten($credits-bg, 15);
+$credits-border-bottom : darken($credits-bg, 15);
 
 $article-title-link-color       : #577b84;
 $article-title-link-hover-color : #378ea4;
@@ -21,6 +25,3 @@ $aside-color        : change-color(mix($text-color, $aside-bg, 80),
 $aside-link-color       : $link-color-visited;
 $aside-link-color-hover : $link-color;
 
-// $article-title-link-color       : saturate($link-color-visited, 25);
-//$article-title-link-hover-color : desaturate($link-color-visited, 5);
-//$date-color                     : lighten($link-color-visited, 30);

@@ -1,0 +1,18 @@
+nav.primary-navlist[role="navigation"]
+  ul
+    li: a[href="{{ root_url }}/" 
+          itemprop="relatedLink"] home
+  ul
+    li: a[href="{{ root_url }}/blog/" 
+          itemprop="relatedLink"] blog
+  ul
+    li: a[href="{{ root_url }}/octoburn/" 
+          itemprop="relatedLink"] octoburn
+  ul
+    li: a[href="#" class="fly"] about
+      ul[role="menu"]
+        li: a[href="{{ root_url }}/faq" 
+              itemprop="relatedLink"] faq
+        li: a[href="{{ root_url }}/publications" 
+              itemprop="relatedLink"] publications
+    li[class="close"]: a[href="#"] close x

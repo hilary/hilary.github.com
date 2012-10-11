@@ -5,7 +5,7 @@ $grid-padding             : 0;
 $container-style          : fluid;
 $show-grid-backgrounds    : true;
 
-$vertical-layout-columns  : 15; // default, mobile first
+$vertical-layout-columns  : 15; 
 $vertical-layout          : $vertical-layout-columns 40em;
 
 $horizontal-aside-columns : 23;
@@ -16,10 +16,10 @@ $aside-right-layout       : 60em $aside-right-columns;
 
 body > div { 
   margin : 0;
-  @include container($vertical-layout,
-                     $horizontal-aside-layout,
-                     $aside-right-layout);
-//             @include susy-grid-background;
+  @include container($vertical-layout,         // $default
+                     $horizontal-aside-layout, // wider, spread out aside
+                     $aside-right-layout);     // full width, move aside to right
+//             @include susy-grid-background;  // for design and debugging
 }
 
 // for convenience

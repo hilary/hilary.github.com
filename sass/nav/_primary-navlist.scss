@@ -1,35 +1,109 @@
+//@import "compass/css3/transition";
+$primary-navlist-width : 9em;
+$slide-offset          : -1em;
+
+$default-transition-duration : 0.5s;
+$default-transition-function : ease;
+$default-transition-delay    : 0.5s;
+
 .primary-navlist {
 
-  ul { // top level, horizontal
-    @include horizontal-list-container;
-    margin-top  : 2px;               // aligning with search!
-    padding-top : .2em;              // aligning with search!
+  position : relative;
 
-    li { // top level, horizontal
-      @include horizontal-list-item;
-      margin : 0;
+  ul { // top level items
+    // when the window is wide enough, move lists side by side
+    @include at-breakpoint($horizontal-aside-layout) {
+      float : left; 
+      &:first-child { margin-left : 0; }
+    }
+    @include at-breakpoint($aside-right-layout)      {
+      float : left; 
+      &:first-child { margin-left : 0; }
+    }
+
+    list-style-type : none;
+    width           : $primary-navlist-width;
+    padding         : 0;
+    margin          : 0;
+
+    li { // main entry for each nav
+      @include transition-duration(0.25s);
+      @include transition-delay(0s);
+      background      : image-url("trans.gif") repeat scroll 0 0 transparent;
+      position        : relative;
+      width           : $primary-navlist-width;
+      z-index         : 10;
+      margin          : 0;
 
       a {
         text-decoration : none;
+        width           : $primary-navlist-width - 1em;
+        display         : block;
+        padding-left    : 1em;
         font-weight     : bold;
         text-shadow     : lighten($nav-bg, 12) 0 1px;
-        @include link-colors($nav-color,
-                             $nav-color-hover,
-                             $nav-color-hover,
-                             $nav-color,
-                             $nav-color-hover);
-        &:link, &:visited, &:active, &:focus, &:hover { padding : 0.2em 0.5em; }
+        background      : none repeat scroll 0 0 $nav-bg;
+        @include nav-link($resting : $nav-color, $activated : $nav-color-hover);
+        &:link, &:hover, &:visited, &:active, &:focus { padding : 0.2em; }
+        &.fly {
+//background: url("arrow.gif") no-repeat scroll right center #DDDDDD;
+        }
       } // a
 
-      ul {
+      &:hover {
 
-        li {
+        > a { 
+          background-color : $credits-bg;
+          &.fly {
+//background: url("arrow-over.gif") no-repeat scroll right center #999999;
+          }
+        }
+        > ul > li {
+          margin-top : 0;
         }
       }
 
-    } // li
+      ul { // 1st level flyouts
+        position        : absolute;
+        z-index         : -1;
+        list-style-type : none;
 
-  } // ul
+        @for $item from 1 through 10 {
+          &:nth-child(#{$item}) { margin-top : $item * $slide-offset; }
+        }
 
-} // .primary-navlist
+        li {
+          @include transition-delay(1s);
+
+          &.p1 { margin-top : 0; }
+
+          ul { // 2nd level flyouts
+            position      : absolute;
+            top           : 0;
+            left          : $primary-navlist-width;
+            margin-left   : -$primary-navlist-width;
+
+            @for $item from 1 through 10 {
+              &:nth-child(#{$item}) { margin-top : $item * $slide-offset; }
+            }
+
+          } // end 2nd level flyouts
+
+          &:hover > ul {
+            @include transition-delay(0s);
+            margin-left : 0;
+          }
+
+        } // end 1st level items
+      } // end 1st level flyouts
+
+      &.close {
+        margin-top : $slide-offset;
+        z-index    : -1;
+      } // end close
+
+    } // 1st level
+  }
+}
+
 

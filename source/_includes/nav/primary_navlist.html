@@ -1,17 +1,24 @@
 <nav class="primary-navlist" role="navigation">
+  <ul><li>
+      <a href="{{ root_url }}/" itemprop="relatedLink">home</a>
+  </li></ul>
+  <ul><li>
+      <a href="{{ root_url }}/blog/" itemprop="relatedLink">blog</a>
+  </li></ul>
+  <ul><li>
+      <a href="{{ root_url }}/octoburn/" itemprop="relatedLink">octoburn</a>
+  </li></ul>
   <ul>
-    <li><a href="{{ root_url }}/" 
-           itemprop="relatedLink">home</a></li>
-    <li><a href="{{ root_url }}/blog/" 
-           itemprop="relatedLink">blog</a></li>
-    <li><a href="{{ root_url }}/octoburn/" 
-           itemprop="relatedLink">octoburn</a></li>
-    <li>about
-        <ul>
-          <li><a href="{{ root_url }}/faq" 
-                 itemprop="relatedLink">faq</a></li>
-          <li><a href="{{ root_url }}/publications" 
-                 itemprop="relatedLink">publications</a></li>
-        </ul>
+    <li>
+      <a href="#" class="fly">about</a>
+      <ul role="menu">
+        <li><a href="{{ root_url }}/faq" itemprop="relatedLink">faq</a></li>
+        <li><a href="{{ root_url }}/publications" 
+               itemprop="relatedLink">publications</a></li>
+      </ul>
+    </li>
+    <li class="close">
+      <a href="#">close x</a>
+    </li>
   </ul>
 </nav>

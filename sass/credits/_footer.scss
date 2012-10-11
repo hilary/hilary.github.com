@@ -16,10 +16,10 @@ footer.credits {
   img { vertical-align : middle; }
 
   a {
-    @include link-colors($credits-link-color,
-                         $hover: $credits-link-color-hover,
-                         $active: $credits-link-color-hover,
-                         $visited: $credits-link-color);
+    @include link-colors($normal  : $credits-link-color,
+                         $hover   : $credits-link-color-hover,
+                         $active  : $credits-link-color-hover,
+                         $visited : $credits-link-color);
   }
 
   div { padding-top : .3em; }

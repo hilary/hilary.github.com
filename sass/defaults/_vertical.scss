@@ -1,0 +1,11 @@
+// compass vertical rhythm, names determined by compass
+$relative-font-sizing        : true;
+$round-to-nearest-half-line  : true; 
+$base-font-size              : 14px; // MUST be in px
+$base-line-height            : 1.3*$base-font-size;
+$min-line-padding            : $base-font-size/7;
+$default-rhythm-border-style : groove;
+@include establish-baseline; // must come after base-line-height and base-font-size
+
+$base-lines                  : lines-for-font-size($base-font-size);
+

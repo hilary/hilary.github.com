@@ -1,108 +1,79 @@
-//@import "compass/css3/transition";
 $primary-navlist-width : 9em;
-$slide-offset          : -1em;
-
-$default-transition-duration : 0.5s;
-$default-transition-function : ease;
-$default-transition-delay    : 0.5s;
+$offset                : -999em;
 
 .primary-navlist {
-
   position : relative;
 
-  ul { // top level items
-    // when the window is wide enough, move lists side by side
-    @include at-breakpoint($horizontal-aside-layout) {
-      float : left; 
-      &:first-child { margin-left : 0; }
-    }
-    @include at-breakpoint($aside-right-layout)      {
-      float : left; 
-      &:first-child { margin-left : 0; }
-    }
+  > ul { // top level nav menu
+    position   : relative;
+    width      : 100%;
+    margin     : 0; padding : 0;
+    z-index    : 10;
 
-    list-style-type : none;
-    width           : $primary-navlist-width;
-    padding         : 0;
-    margin          : 0;
+    > li { // main entry for each nav
+      position : relative;
+      margin   : 0; 
+      padding  : 0;
+      @include float-left;
 
-    li { // main entry for each nav
-      @include transition-duration(0.25s);
-      @include transition-delay(0s);
-      background      : image-url("trans.gif") repeat scroll 0 0 transparent;
-      position        : relative;
-      width           : $primary-navlist-width;
-      z-index         : 10;
-      margin          : 0;
-
-      a {
-        text-decoration : none;
-        width           : $primary-navlist-width - 1em;
+      > a {
         display         : block;
-        padding-left    : 1em;
+        margin          : 0;
         font-weight     : bold;
+        text-decoration : none;
         text-shadow     : lighten($nav-bg, 12) 0 1px;
-        background      : none repeat scroll 0 0 $nav-bg;
         @include nav-link($resting : $nav-color, $activated : $nav-color-hover);
-        &:link, &:hover, &:visited, &:active, &:focus { padding : 0.2em; }
-        &.fly {
-//background: url("arrow.gif") no-repeat scroll right center #DDDDDD;
-        }
+        &:link, &:hover, &:visited, &:active, &:focus { padding : 0.2em 1em; }
       } // a
 
-      &:hover {
+      .slide {
+        text-indent : 1em;
+        padding     : 0.2em 0;
 
-        > a { 
-          background-color : $credits-bg;
-          &.fly {
-//background: url("arrow-over.gif") no-repeat scroll right center #999999;
-          }
-        }
-        > ul > li {
-          margin-top : 0;
+        &:after {
+          content     : '\2730'; // '\2730' (star) 261f (down index finger)
+          margin-left : .1em;
         }
       }
 
-      ul { // 1st level flyouts
-        position        : absolute;
-        z-index         : -1;
-        list-style-type : none;
+      &:hover {
+        > a { background-color : $credits-bg; }
+        > ul { left : 0; }
+      }
 
-        @for $item from 1 through 10 {
-          &:nth-child(#{$item}) { margin-top : $item * $slide-offset; }
+      > ul { 
+        float            : none;
+        width            : $primary-navlist-width;
+        position         : absolute;
+        left             : $offset;
+        top              : 1.8em;
+        margin           : 0;
+        list-style-type  : none;
+        background-color : $nav-bg;
+        @include background-image(
+          linear-gradient($nav-bg-light, $nav-bg, $nav-bg-dark));
+
+        > li {
+          width  : $primary-navlist-width;
+          margin : 0;
+
+          > a { 
+            width           : $primary-navlist-width;
+            display         : block;
+            margin          : 0;
+            font-weight     : bold;
+            text-decoration : none;
+            text-shadow     : lighten($nav-bg, 12) 0 1px;
+            @include nav-link($resting : $nav-color, 
+                              $activated : $nav-color-hover);
+            &:link, &:hover, &:visited, &:active, &:focus { padding : 0.2em 1em; }
+            &:hover { background-color : $credits-bg; }
+          } // a
+
         }
-
-        li {
-          @include transition-delay(1s);
-
-          &.p1 { margin-top : 0; }
-
-          ul { // 2nd level flyouts
-            position      : absolute;
-            top           : 0;
-            left          : $primary-navlist-width;
-            margin-left   : -$primary-navlist-width;
-
-            @for $item from 1 through 10 {
-              &:nth-child(#{$item}) { margin-top : $item * $slide-offset; }
-            }
-
-          } // end 2nd level flyouts
-
-          &:hover > ul {
-            @include transition-delay(0s);
-            margin-left : 0;
-          }
-
-        } // end 1st level items
-      } // end 1st level flyouts
-
-      &.close {
-        margin-top : $slide-offset;
-        z-index    : -1;
-      } // end close
-
-    } // 1st level
+        
+      } // end dropdowns
+    } // li
   }
 }
 

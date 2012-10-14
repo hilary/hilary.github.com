@@ -1,6 +1,5 @@
 time[itemprop="datePublished"], time[itemprop="dateModified"] {
 
-  @extend .meta;
   @extend .header;
   color          : $date-color;
   text-transform : uppercase;
@@ -17,5 +16,4 @@ time[itemprop="dateModified"]:before {
   display      : inline;
   margin       : 0;
   padding      : 0 .2em 0 .5em;
-  @include adjust-font-size-to(.85*$base-font-size);
 }

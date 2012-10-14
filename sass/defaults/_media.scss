@@ -1,19 +1,17 @@
-article, 
-aside, 
 details, 
 figcaption, 
-figure, 
-footer, 
-header, 
-hgroup, 
-section, 
-summary { // missing definitions: IE 7/8/9
+figure { // missing definitions: IE 7/8/9
   display : block;
 }
 
-[hidden] { // attribute present: IE 7/8/9, Safari 4. 
-  display : none; 
+figure { margin : 0; } // margin missing: IE 7/8/9, Safari 5
+
+img {
+  border : 0; // Remove border when inside `a` element: IE 7/8/9
+  -ms-interpolation-mode : bicubic; // Improve image quality when scaled: IE 7
 }
+
+svg:not(:root) { overflow : hidden; } // overflow displayed oddly in IE 9
 
 audio, 
 canvas, 
@@ -26,12 +24,4 @@ video { // missing definitions: IE 7/8/9
 audio:not([controls]) {
   display : none; // prevent modern browsers from displaying audio without controls
   height  : 0;    // remove excess height in iOS 5 devices
-}
-
-.flex-content { max-width: 100%; height: auto; }
-
-body, 
-nav { 
-  margin  : 0;
-  padding : 0;
 }

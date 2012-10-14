@@ -1,0 +1,14 @@
+.aside { 
+  @extend .sans;  
+  a { font-weight : normal; }
+}
+
+$aside-font-size : .9*$base-font-size;
+$aside-lines     : lines-for-font-size($aside-font-size);
+
+aside { 
+  h1 { @include adjust-font-size-to(1.3*$aside-font-size); }
+  @extend .aside; 
+  @include adjust-font-size-to($aside-font-size, .9*$aside-lines);
+  display : block;
+}

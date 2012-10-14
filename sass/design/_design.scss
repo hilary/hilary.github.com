@@ -1,4 +1,6 @@
+.sans  { font-family : Ubuntu, $sans;  }
+.serif { font-family : Quando, $serif; }
+.mono  { font-family : PT+Mono, $mono; }
+
 @import 'core-colors';
 @import 'grid-geometry';
-@import 'typography';
-

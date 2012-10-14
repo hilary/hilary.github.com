@@ -28,9 +28,7 @@
   }
 }
 
-@function text-color($color, 
-                     $dark  : dark, 
-                     $light : light){
+@function text-color($color, $dark : dark, $light : light){
   $text-color : 
   ( (red($color)*299) + (green($color)*587) + (blue($color)*114) ) / 1000;
   $text-color : if($text-color >= 150, $dark, $light);

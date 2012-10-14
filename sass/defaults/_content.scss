@@ -1,0 +1,18 @@
+article, 
+section, 
+summary { // missing definitions: IE 7/8/9
+  display : block;
+}
+
+p { margin : 0; }
+
+abbr, abbr[title], acronym { 
+  border-bottom : 1px dashed gray; 
+  cursor : help;  
+}
+
+table { // Leave some space in between cells. Duh.
+  border-collapse : separate;
+  border-spacing  : 1em 0;
+}
+

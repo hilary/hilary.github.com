@@ -8,12 +8,11 @@
     padding : .2em $horizontal-aside-single;
 
     .primary-navlist { 
-      @include span-columns(13, $horizontal-aside-columns); 
-      margin-right : 0;
-      padding-right : $horizontal-aside-single;
+      @include span-columns(15, $horizontal-aside-columns); 
+      margin-right : 0; padding-right : 0;
     }
     .simple-search { 
-      @include span-columns(9 omega, $horizontal-aside-columns);
+      @include span-columns(8 omega, $horizontal-aside-columns);
     }
 
   } // $horizontal-aside-layout
@@ -23,9 +22,8 @@
     padding : .2em $aside-right-gutter .2em $aside-right-single;
 
     .primary-navlist { 
-      @include span-columns(20, $aside-right-columns); 
-      margin-right : 0;
-      padding-right : $aside-right-single;
+      @include span-columns(22, $aside-right-columns); 
+      margin-right : 0; padding-right : 0;
     }
     .simple-search { 
       @include span-columns(9 omega, $aside-right-columns); 

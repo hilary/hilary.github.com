@@ -1,0 +1,44 @@
+// this file has global typography default styles. Most default styles are
+// grouped semantically by related tag, as described in _defaults.scss
+
+html { // prevent iOS text size adjust after orientation change, 
+  -webkit-text-size-adjust : 100%; // without disabling user zoom.
+  -ms-text-size-adjust     : 100%;
+}
+
+.main { 
+  @extend .sans;  
+  a { font-weight : bold; }
+}
+
+body { 
+  @extend .main; 
+  cursor  : auto !important; 
+  margin  : 0;
+  padding : 0;
+}
+
+b, strong { font-weight     : bold;         }
+del, s    { text-decoration : line-through; }
+em, dfn   { font-style      : italic;       }
+
+small { @include adjust-font-size-to(.8*$base-font-size);  }
+big   { @include adjust-font-size-to(1.2*$base-font-size); }
+
+sup, sub { 
+  @include adjust-font-size-to(.8*$base-font-size);
+  position : relative;
+  display  : inline-block;
+}
+sup { top    : -.5em; }
+sub { bottom : -.5em; }
+
+[hidden] { display : none; } // attribute missing in a few browsers
+
+.flex-content { max-width: 100%; height: auto; }
+
+.bullet { 
+  content : '\2022'; 
+  padding : 0 .4em;
+  display : inline-block;
+}

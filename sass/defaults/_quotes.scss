@@ -1,0 +1,46 @@
+blockquote {
+  position   : relative;
+  margin     : 0 2em;
+  font-style : italic;
+  cite {
+    font-style : normal;
+    &:before { 
+      content : '\2014'; 
+      padding : { right : .3em; left : .3em; }
+    }
+  }
+}
+
+q { quotes : none; } // CSS quotes not supported: IE 7
+q { 
+  font-style : italic;
+  &:before { content : '\201C'; }
+  &:after  { content : '\201D'; }
+}
+
+mark { // missing definition: IE 7/8/9
+  background-color : #ff0;
+  color            : #000;
+}
+
+.pullquote-right:before,
+.pullquote-left:before   {
+  content  : attr(data-pullquote);
+
+  margin   : 0;
+  padding  : 0;
+  position : relative;
+  width    : 45%;
+  @include adjust-font-size-to(1.4*$base-font-size); 
+}
+
+.pullquote-right:before {
+  @include float-right;
+  padding-left : 1.5em;
+}
+
+.pullquote-left:before {
+  @include float-left;
+  padding-right : 1.5em;
+}
+

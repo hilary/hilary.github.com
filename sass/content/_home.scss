@@ -1,0 +1,20 @@
+#home {
+
+  .content {
+
+    > ul {
+      list-style-type : none;
+
+      li:before { margin-right : 0.5em; }
+
+      li.blogging:before    { content : '\270d'; }
+
+      li.backlog:before     { content : '\2615'; }
+
+      li.framework:before   { content : '\25a3'; }
+
+      li.consolidate:before { content : '\2713'; }
+
+    } // end > ul
+  } // end .content
+} // end #home

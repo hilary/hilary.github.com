@@ -6,7 +6,9 @@ date         : 2012-09-21 00:51
 comments     : true
 sharing      : true
 tldr         : I've spent much of the past several weeks working on what started as an Octopress theme and turned into its own blogging engine. This website now runs on that engine; Octoburn.
-tags         : Octoburn, Octopress
+tags         :
+- Octoburn
+- Octopress
 ---
 
 I've spent much of the past several weeks working on what started as

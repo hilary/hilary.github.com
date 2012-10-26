@@ -6,31 +6,35 @@
     </url>
     <url>
         <loc>http://hholz.com/blog/2012/deploying-octopress-on-github/</loc>
-        <lastmod>2012-09-30T21:07:18-07:00</lastmod>
+        <lastmod>2012-10-15T13:17:26-07:00</lastmod>
     </url>
     <url>
         <loc>http://hholz.com/blog/2012/and-were-live/</loc>
-        <lastmod>2012-09-30T21:04:06-07:00</lastmod>
+        <lastmod>2012-10-16T21:56:25-07:00</lastmod>
     </url>
     <url>
         <loc>http://hholz.com/blog/2012/doc-of-the-day/</loc>
-        <lastmod>2012-09-30T21:05:46-07:00</lastmod>
+        <lastmod>2012-10-15T13:16:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://hholz.com/blog/2012/diagnosing-an-emacs-bug/</loc>
-        <lastmod>2012-10-05T18:05:37-07:00</lastmod>
+        <lastmod>2012-10-16T22:01:54-07:00</lastmod>
     </url>
     <url>
         <loc>http://hholz.com/archives/</loc>
-        <lastmod>2012-10-05T18:05:37-07:00</lastmod>
+        <lastmod>2012-10-16T22:01:54-07:00</lastmod>
     </url>
     <url>
         <loc>http://hholz.com/blog/</loc>
-        <lastmod>2012-10-05T18:05:37-07:00</lastmod>
+        <lastmod>2012-10-16T22:10:05-07:00</lastmod>
     </url>
     <url>
         <loc>http://hholz.com/copyright/</loc>
-        <lastmod>2012-10-05T18:05:37-07:00</lastmod>
+        <lastmod>2012-10-16T22:01:54-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://hholz.com/faq/</loc>
+        <lastmod>2012-10-08T17:23:42-07:00</lastmod>
     </url>
     <url>
         <loc>http://hholz.com/feed/integrating_design.xml</loc>
@@ -38,10 +42,14 @@
     </url>
     <url>
         <loc>http://hholz.com/</loc>
-        <lastmod>2012-10-05T18:05:37-07:00</lastmod>
+        <lastmod>2012-10-16T22:01:54-07:00</lastmod>
     </url>
     <url>
         <loc>http://hholz.com/octoburn/</loc>
         <lastmod>2012-10-03T20:12:10-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://hholz.com/publications/</loc>
+        <lastmod>2012-10-16T22:01:54-07:00</lastmod>
     </url>
 </urlset>

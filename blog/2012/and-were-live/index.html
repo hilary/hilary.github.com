@@ -26,7 +26,9 @@
 <link rel="canonical" href="http://hholz.com/blog/2012/and-were-live/">
 
   
-<link href="/stylesheets/default.css" media="screen, projection" rel="stylesheet" type="text/css">
+<link href="/stylesheets/use-default-aside.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+
 
   <script src="/javascripts/bootstrap-dropdown.js" type="text/javascript"></script>
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
@@ -38,8 +40,7 @@
   <link href="/favicon.png" rel="icon">
 </head>
 
-<body itemscope 
-      itemtype="http://schema.org/Blog">
+<body id="blog" itemscope itemtype="http://schema.org/Blog">
   <div id="grid">
     <header>
   <div class="banner">
@@ -110,13 +111,11 @@
 </header>
 
     <article class="main-content">
-      <article class="content" itemscope 
-         itemtype="http://schema.org/BlogPosting"
-         role="article">
+      <article class="content" itemscope itemtype="http://schema.org/BlogPosting" role="article">
   <header>
-    <time datetime="2012-09-21T00:51:00-07:00" itemprop="datePublished">September 21<span>st</span> 2012</time><a rel="bookmark" href="http://hholz.com/blog/2012/and-were-live/" itemprop="url">permalink</a><nav class="tag-links"><ul><li><a rel="tag" href="/tag/octoburn.html"><span itemprop="keywords">Octoburn</span></a></li><li><a rel="tag" href="/tag/octopress.html"><span itemprop="keywords">Octopress</span></a></li></ul></nav>
+    <time datetime="2012-09-21T00:51:00-07:00" itemprop="datePublished">September 21<span>st</span> 2012</time><a rel="bookmark" href="http://hholz.com/blog/2012/and-were-live/" itemprop="url">permalink</a>
+    <nav class="tag-links"><ul><li><a rel="tag" href="/tag/octoburn.html"><span itemprop="keywords">Octoburn</span></a></li><li><a rel="tag" href="/tag/octopress.html"><span itemprop="keywords">Octopress</span></a></li></ul></nav>
     <h1 itemprop="headline" class="page-title">and we're live</h1>
-
     
   <menu type="list" label="share">
     <li class="twitter-share">
@@ -151,8 +150,8 @@ use. You might want to wait until the next release, as I am currently
 turning Octoburn into a gem.</p>
 
   </section>
-  <nav class="tag-links"><ul><li><a rel="tag" href="/tag/octoburn.html"><span itemprop="keywords">Octoburn</span></a></li><li><a rel="tag" href="/tag/octopress.html"><span itemprop="keywords">Octopress</span></a></li></ul></nav>
-  
+  <footer>
+    
   <menu type="list" label="share">
     <li class="twitter-share">
       <a href="http://twitter.com/share" 
@@ -172,7 +171,8 @@ turning Octoburn into a gem.</p>
   </menu>
 
 
-  
+    <nav class="tag-links"><ul><li><a rel="tag" href="/tag/octoburn.html"><span itemprop="keywords">Octoburn</span></a></li><li><a rel="tag" href="/tag/octopress.html"><span itemprop="keywords">Octopress</span></a></li></ul></nav>
+    
   <nav class="page-nav" role="navigation">
     
       <a rel="prev"
@@ -187,10 +187,9 @@ turning Octoburn into a gem.</p>
   </nav>
 
 
+  </footer>
   
-  <section itemprop="comment" 
-           itemscope 
-           itemtype="http://schema.org/UserComments">
+  <section itemprop="comment" itemscope itemtype="http://schema.org/UserComments">
     <h1>Comments</h1>
     <section id="disqus_thread" aria-live="polite">
       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

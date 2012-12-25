@@ -1,0 +1,46 @@
+.content > footer { 
+
+  @include clearfix;
+  .tag-links { clear : both; }
+
+  @include at-breakpoint($horizontal-aside-layout) { 
+
+    $horizontal-aside-menu-columns : 7;
+    $horizontal-aside-tag-columns  : $horizontal-aside-columns - $horizontal-aside-menu-columns;
+    menu[label="share"] { 
+      @include span-columns($horizontal-aside-menu-columns,
+                            $horizontal-aside-columns); 
+    }
+    .tag-links, time {
+      clear : none;
+      @include span-columns($horizontal-aside-tag-columns omega,
+                            $horizontal-aside-columns); 
+    }
+    time { text-align : right; }
+
+    a[rel="prev"] { @include span-columns(11      , $horizontal-aside-columns); }
+    a[rel="next"] { @include span-columns(11 omega, $horizontal-aside-columns); }
+
+  }
+
+  @include at-breakpoint($aside-right-layout) {
+
+    $aside-right-menu-columns : 7;
+    $aside-right-tag-columns  : $aside-right-content-columns - $aside-right-menu-columns;
+    menu[label="share"] { 
+      @include span-columns($aside-right-menu-columns,
+                            $aside-right-content-columns); 
+    }
+    .tag-links, time {
+      clear : none;
+      @include span-columns($aside-right-tag-columns omega,
+                            $aside-right-content-columns); 
+    }
+    time { text-align : right; }
+
+    a[rel="prev"] { @include span-columns(11      , $aside-right-content-columns); }
+    a[rel="next"] { @include span-columns(11 omega, $aside-right-content-columns); }
+
+  }
+
+} // .content > footer

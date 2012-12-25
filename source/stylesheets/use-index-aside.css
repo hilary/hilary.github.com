@@ -1,0 +1,2399 @@
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/defaults/_defaults.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 4, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 9, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+body {
+  cursor: auto !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 15, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 16, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+del, s {
+  text-decoration: line-through;
+}
+
+/* line 17, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+em, dfn {
+  font-style: italic;
+}
+
+/* line 19, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+small {
+  font-size: .8em;
+}
+
+/* line 20, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+big {
+  font-size: 1.2em;
+}
+
+/* line 22, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+sup, sub {
+  font-size: .8em;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 27, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 28, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+sub {
+  bottom: -0.5em;
+}
+
+/* line 30, /Users/hholz/coding/ruby/integrating/sass/defaults/_typography.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/defaults/_pre.scss */
+pre, code, kbd, var, tt, samp {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
+  word-wrap: break-word;
+  margin: .5em 0;
+  padding: .2em;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/defaults/_quotes.scss */
+blockquote {
+  position: relative;
+  margin: 0 2em;
+  font-style: italic;
+}
+/* line 5, /Users/hholz/coding/ruby/integrating/sass/defaults/_quotes.scss */
+blockquote cite {
+  font-style: normal;
+}
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/defaults/_quotes.scss */
+blockquote cite:before {
+  content: '\2014';
+  padding-right: .3em;
+  padding-left: .3em;
+}
+
+/* line 14, /Users/hholz/coding/ruby/integrating/sass/defaults/_quotes.scss */
+q {
+  quotes: none;
+}
+
+/* line 15, /Users/hholz/coding/ruby/integrating/sass/defaults/_quotes.scss */
+q {
+  font-style: italic;
+}
+/* line 17, /Users/hholz/coding/ruby/integrating/sass/defaults/_quotes.scss */
+q:before {
+  content: '\201C';
+}
+/* line 18, /Users/hholz/coding/ruby/integrating/sass/defaults/_quotes.scss */
+q:after {
+  content: '\201D';
+}
+
+/* line 21, /Users/hholz/coding/ruby/integrating/sass/defaults/_quotes.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/defaults/_headers.scss */
+header, hgroup, footer {
+  display: block;
+}
+
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/defaults/_headers.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.65em 0 .35em 0;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 8, /Users/hholz/coding/ruby/integrating/sass/defaults/_headers.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 9, /Users/hholz/coding/ruby/integrating/sass/defaults/_headers.scss */
+h2, section h1 {
+  font-size: 1.6em;
+}
+
+/* line 10, /Users/hholz/coding/ruby/integrating/sass/defaults/_headers.scss */
+h3, section h2, section section h1 {
+  font-variant: small-caps;
+  font-size: 1.3em;
+}
+
+/* line 14, /Users/hholz/coding/ruby/integrating/sass/defaults/_headers.scss */
+h4, section h3, section section h2, section section section h1 {
+  font-variant: normal;
+  font-size: 1.3em;
+}
+
+/* line 19, /Users/hholz/coding/ruby/integrating/sass/defaults/_headers.scss */
+h5, section h4, section section h3, section section section h2,
+section section section section h1 {
+  font-variant: small-caps;
+  font-size: 1.1em;
+}
+
+/* line 24, /Users/hholz/coding/ruby/integrating/sass/defaults/_headers.scss */
+h6, section h5, section section h4, section section section h3,
+section section section section h2, section section section section section h1 {
+  font-variant: normal;
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+nav, menu {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+nav ul, nav ol,
+menu[type=list] {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 14, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+a {
+  text-decoration: none;
+}
+/* line 4, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+a:hover {
+  text-decoration: underline;
+}
+/* line 16, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+a:focus, a:active, a:hover {
+  outline: 0;
+}
+
+/* line 19, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+ul, ol, dl {
+  margin: 0 0 0 1em;
+  padding: 0;
+}
+
+/* line 24, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+ul {
+  list-style-type: disc;
+}
+/* line 25, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+ul ul {
+  list-style-type: circle;
+}
+/* line 26, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+ul ul ul {
+  list-style-type: square;
+}
+
+/* line 28, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+ol {
+  list-style-type: decimal;
+}
+/* line 29, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+ol ol {
+  list-style-type: lower-alpha;
+}
+/* line 30, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/* line 32, /Users/hholz/coding/ruby/integrating/sass/defaults/_nav.scss */
+li, dd {
+  margin: .5em 0 .5em 2em;
+}
+
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/defaults/_content.scss */
+article,
+section,
+summary {
+  display: block;
+}
+
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/defaults/_content.scss */
+p {
+  margin: 0 0 0.5em 0;
+}
+
+/* line 9, /Users/hholz/coding/ruby/integrating/sass/defaults/_content.scss */
+abbr, abbr[title], acronym {
+  border-bottom: 1px dashed gray;
+  cursor: help;
+}
+
+/* line 14, /Users/hholz/coding/ruby/integrating/sass/defaults/_content.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 1em 0;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+form {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+fieldset {
+  margin: .5em;
+  padding: .5em;
+  border: 1px solid #c0c0c0;
+  font-size: 1em;
+}
+
+/* line 13, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+legend {
+  font-size: 1em;
+  margin: 0;
+  *margin-left: -0.5em;
+  border: none;
+}
+
+/* line 20, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 26, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 1em;
+  *width: 1em;
+}
+
+/* line 33, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* input[type="search"]::-webkit-search-cancel-button, // Remove search cancel button,
+input[type="search"]::-webkit-search-decoration {   // inner padding: Saf 5, Chrome OS X
+  -webkit-appearance : none; 
+} */
+/* line 49, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+
+/* line 58, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 67, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 72, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 78, /Users/hholz/coding/ruby/integrating/sass/defaults/_forms.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/defaults/_media.scss */
+details,
+figcaption,
+figure {
+  display: block;
+}
+
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/defaults/_media.scss */
+figure {
+  margin: 0;
+}
+
+/* line 9, /Users/hholz/coding/ruby/integrating/sass/defaults/_media.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 14, /Users/hholz/coding/ruby/integrating/sass/defaults/_media.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 18, /Users/hholz/coding/ruby/integrating/sass/defaults/_media.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 24, /Users/hholz/coding/ruby/integrating/sass/defaults/_media.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/defaults/_aside.scss */
+aside {
+  display: block;
+  font-size: .9em;
+  line-height: .9em;
+}
+/* line 6, /Users/hholz/coding/ruby/integrating/sass/defaults/_aside.scss */
+aside h1 {
+  font-size: 1.3em;
+}
+
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/design/_typography.scss */
+.sans, .main, body, .aside, aside, .aside-base, html .gist .gist-file .gist-meta {
+  font-family: Ubuntu, Trebuchet MS, Arial, sans-serif;
+}
+
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/design/_typography.scss */
+.serif, .header, header, h1, h2, h3, h4, h5, h6, aside header, aside h1, aside h2, aside h3, aside h4, aside h5, aside h6, time[itemprop="datePublished"], time[itemprop="dateModified"], a[rel=bookmark], .code-title, html .gist .gist-file .gist-meta a[href*='#file'], h3.filename, figure.code figcaption, .nav, nav, menu, nav header, nav h1, nav h2, nav h3, nav h4, nav h5, nav h6, menu header, menu h1, menu h2, menu h3, menu h4, menu h5, menu h6, .simple-search form, article.excerpt a[rel=full-article] {
+  font-family: Quando, Georgia, Times, Times New Roman, serif;
+}
+
+/* line 11, /Users/hholz/coding/ruby/integrating/sass/design/_typography.scss */
+.mono, .code_cl, pre, code, kbd, var, tt, samp, pre header, pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, code header, code h1, code h2, code h3, code h4, code h5, code h6, kbd header, kbd h1, kbd h2, kbd h3, kbd h4, kbd h5, kbd h6, var header, var h1, var h2, var h3, var h4, var h5, var h6, tt header, tt h1, tt h2, tt h3, tt h4, tt h5, tt h6, samp header, samp h1, samp h2, samp h3, samp h4, samp h5, samp h6, .pre-code, html .gist .gist-file .gist-syntax .gist-highlight pre, .highlight code, aside.github > ul > li a, p code, li code {
+  font-family: UbuntuMono, Menlo, Monaco, lucida console, Courier New, monospace;
+}
+
+/* line 14, /Users/hholz/coding/ruby/integrating/sass/design/_typography.scss */
+.meta, time, a[rel=bookmark], article.excerpt a[rel=full-article], .tag-links, footer.credits {
+  font-size: .85em;
+}
+
+/* line 18, /Users/hholz/coding/ruby/integrating/sass/design/_typography.scss */
+.bullet {
+  content: '\2022';
+  padding: 0 .4em;
+  display: inline-block;
+}
+
+/* line 24, /Users/hholz/coding/ruby/integrating/sass/design/_typography.scss */
+.flex-content {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 61, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 87.5%;
+}
+
+/* line 64, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
+/* line 19, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1.3em;
+}
+
+/* line 21, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+h2, section h1 {
+  font-size: 1.6em;
+  line-height: 1.21875em;
+}
+
+/* line 24, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+.pullquote-right:before,
+.pullquote-left:before {
+  font-size: 1.4em;
+  line-height: 1.39286em;
+}
+
+/* line 26, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+aside h1 {
+  font-size: 1.17em;
+  line-height: 1.66667em;
+}
+
+/* line 29, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+h3,
+section h2,
+section section h1 {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+/* line 33, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+h4,
+section h3,
+section section h2,
+section section section h1 {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+/* line 35, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+big {
+  font-size: 1.2em;
+  line-height: 1.625em;
+}
+
+/* line 41, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+h5,
+section h4,
+section section h3,
+section section section h2,
+section section section section h1 {
+  font-size: 1.1em;
+  line-height: 1.77273em;
+}
+
+/* line 47, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+h6,
+section h5,
+section section h4,
+section section section h3,
+section section section section h2,
+section section section section section h1 {
+  font-size: 1.1em;
+  line-height: 1.77273em;
+}
+
+/* line 49, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+.mono, .code_cl, pre, code, kbd, var, tt, samp, pre header, pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, code header, code h1, code h2, code h3, code h4, code h5, code h6, kbd header, kbd h1, kbd h2, kbd h3, kbd h4, kbd h5, kbd h6, var header, var h1, var h2, var h3, var h4, var h5, var h6, tt header, tt h1, tt h2, tt h3, tt h4, tt h5, tt h6, samp header, samp h1, samp h2, samp h3, samp h4, samp h5, samp h6, .pre-code, html .gist .gist-file .gist-syntax .gist-highlight pre, .highlight code, aside.github > ul > li a, p code, li code {
+  font-size: 0.95em;
+  line-height: 1.36842em;
+}
+
+/* line 51, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+.nav, nav, menu, nav header, nav h1, nav h2, nav h3, nav h4, nav h5, nav h6, menu header, menu h1, menu h2, menu h3, menu h4, menu h5, menu h6, .simple-search form, article.excerpt a[rel=full-article] {
+  font-size: 0.9em;
+  line-height: 1.44444em;
+}
+
+/* line 52, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+aside {
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+
+/* line 54, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+.meta, time, a[rel=bookmark], article.excerpt a[rel=full-article], .tag-links, footer.credits {
+  font-size: 0.85em;
+  line-height: 1.52941em;
+}
+
+/* line 56, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+sup, sub {
+  font-size: 0.8em;
+  line-height: 1.625em;
+}
+
+/* line 57, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+small {
+  font-size: 0.8em;
+  line-height: 1.625em;
+}
+
+/* line 59, /Users/hholz/coding/ruby/integrating/sass/design/_vertical.scss */
+fieldset {
+  border-style: solid;
+  border-width: 1px;
+  padding: 17px;
+}
+
+/* line 20, /Users/hholz/coding/ruby/integrating/sass/design/_grid-geometry.scss */
+body > div {
+  margin: 0;
+}
+@media (max-width: 35em) {
+  /* line 20, /Users/hholz/coding/ruby/integrating/sass/design/_grid-geometry.scss */
+  body > div {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 38, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  body > div:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 20, /Users/hholz/coding/ruby/integrating/sass/design/_grid-geometry.scss */
+  body > div {
+    width: auto;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 20, /Users/hholz/coding/ruby/integrating/sass/design/_grid-geometry.scss */
+  body > div {
+    width: auto;
+  }
+}
+
+/* line 6, /Users/hholz/coding/ruby/integrating/sass/design/_design.scss */
+.main-content {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/_typography.scss */
+.main a, body a {
+  font-weight: bold;
+}
+
+/* line 4, /Users/hholz/coding/ruby/integrating/sass/core/_typography.scss */
+.header a, header a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, aside header a, aside h1 a, aside h2 a, aside h3 a, aside h4 a, aside h5 a, aside h6 a, time[itemprop="datePublished"] a, time[itemprop="dateModified"] a, a[rel=bookmark] a, .code-title a, html .gist .gist-file .gist-meta a[href*='#file'] a, h3.filename a, figure.code figcaption a {
+  font-weight: normal;
+}
+
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/core/_typography.scss */
+.nav, nav, menu, nav header, nav h1, nav h2, nav h3, nav h4, nav h5, nav h6, menu header, menu h1, menu h2, menu h3, menu h4, menu h5, menu h6, .simple-search form, article.excerpt a[rel=full-article] {
+  font-size: .9em;
+}
+/* line 9, /Users/hholz/coding/ruby/integrating/sass/core/_typography.scss */
+.nav a, nav a, menu a, nav header a, nav h1 a, nav h2 a, nav h3 a, nav h4 a, nav h5 a, nav h6 a, menu header a, menu h1 a, menu h2 a, menu h3 a, menu h4 a, menu h5 a, menu h6 a, .simple-search form a, article.excerpt a[rel=full-article] a {
+  font-weight: normal;
+}
+
+/* line 16, /Users/hholz/coding/ruby/integrating/sass/core/_typography.scss */
+.aside a, aside a, .aside-base a {
+  font-weight: normal;
+}
+
+/* line 22, /Users/hholz/coding/ruby/integrating/sass/core/_typography.scss */
+.mono, .code_cl, pre, code, kbd, var, tt, samp, pre header, pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, code header, code h1, code h2, code h3, code h4, code h5, code h6, kbd header, kbd h1, kbd h2, kbd h3, kbd h4, kbd h5, kbd h6, var header, var h1, var h2, var h3, var h4, var h5, var h6, tt header, tt h1, tt h2, tt h3, tt h4, tt h5, tt h6, samp header, samp h1, samp h2, samp h3, samp h4, samp h5, samp h6, .pre-code, html .gist .gist-file .gist-syntax .gist-highlight pre, .highlight code, aside.github > ul > li a, p code, li code {
+  font-size: .95em;
+}
+
+/* line 23, /Users/hholz/coding/ruby/integrating/sass/core/_typography.scss */
+.code_cl a, pre a, code a, kbd a, var a, tt a, samp a, pre header a, pre h1 a, pre h2 a, pre h3 a, pre h4 a, pre h5 a, pre h6 a, code header a, code h1 a, code h2 a, code h3 a, code h4 a, code h5 a, code h6 a, kbd header a, kbd h1 a, kbd h2 a, kbd h3 a, kbd h4 a, kbd h5 a, kbd h6 a, var header a, var h1 a, var h2 a, var h3 a, var h4 a, var h5 a, var h6 a, tt header a, tt h1 a, tt h2 a, tt h3 a, tt h4 a, tt h5 a, tt h6 a, samp header a, samp h1 a, samp h2 a, samp h3 a, samp h4 a, samp h5 a, samp h6 a, .pre-code a, html .gist .gist-file .gist-syntax .gist-highlight pre a, .highlight code a, aside.github > ul > li a a {
+  font-weight: bold;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/branding/_branding.scss */
+.banner {
+  background-color: #1d2f2b;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/branding/_branding-layout.scss */
+.banner {
+  margin: 0;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 2.27273%;
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 1, /Users/hholz/coding/ruby/integrating/sass/core/branding/_branding-layout.scss */
+  .banner {
+    padding: 0 2.94118%;
+  }
+  /* line 11, /Users/hholz/coding/ruby/integrating/sass/core/branding/_branding-layout.scss */
+  .banner > hgroup {
+    width: 60.29412%;
+    float: left;
+    margin-right: 1.47059%;
+    margin-right: 0;
+    padding-top: 2.94118%;
+    padding-bottom: 1.47059%;
+  }
+  /* line 21, /Users/hholz/coding/ruby/integrating/sass/core/branding/_branding-layout.scss */
+  .banner menu[label=follow] {
+    width: 38.23529%;
+    float: right;
+    margin-right: 0;
+    padding-top: 0;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 1, /Users/hholz/coding/ruby/integrating/sass/core/branding/_branding-layout.scss */
+  .banner {
+    padding: 0 2.17391%;
+  }
+  /* line 34, /Users/hholz/coding/ruby/integrating/sass/core/branding/_branding-layout.scss */
+  .banner > hgroup {
+    width: 54.34783%;
+    float: left;
+    margin-right: 1.08696%;
+    margin-right: 0;
+    padding-top: 2.17391%;
+    padding-bottom: 1.08696%;
+  }
+  /* line 44, /Users/hholz/coding/ruby/integrating/sass/core/branding/_branding-layout.scss */
+  .banner menu[label=follow] {
+    width: 31.52174%;
+    float: right;
+    margin-right: 0;
+    padding-top: 0;
+  }
+}
+
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/core/branding/_hgroup.scss */
+hgroup h1, hgroup h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+/* line 8, /Users/hholz/coding/ruby/integrating/sass/core/branding/_hgroup.scss */
+hgroup h1 {
+  color: #f2f2f2;
+}
+/* line 10, /Users/hholz/coding/ruby/integrating/sass/core/branding/_hgroup.scss */
+hgroup h2 {
+  color: #c0d8d2;
+  font-size: 1.2em;
+  line-height: 1.625em;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/nav/_nav-layout.scss */
+.primary-navigation {
+  *zoom: 1;
+  margin: 0;
+  padding: .3em;
+}
+/* line 38, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.primary-navigation:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 1, /Users/hholz/coding/ruby/integrating/sass/core/nav/_nav-layout.scss */
+  .primary-navigation {
+    padding: 0.2em 2.94118%;
+  }
+  /* line 10, /Users/hholz/coding/ruby/integrating/sass/core/nav/_nav-layout.scss */
+  .primary-navigation .primary-navlist {
+    width: 64.70588%;
+    float: left;
+    margin-right: 1.47059%;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  /* line 14, /Users/hholz/coding/ruby/integrating/sass/core/nav/_nav-layout.scss */
+  .primary-navigation .simple-search {
+    width: 33.82353%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 1, /Users/hholz/coding/ruby/integrating/sass/core/nav/_nav-layout.scss */
+  .primary-navigation {
+    padding: 0.2em 1.08696% 0.2em 2.17391%;
+  }
+  /* line 24, /Users/hholz/coding/ruby/integrating/sass/core/nav/_nav-layout.scss */
+  .primary-navigation .primary-navlist {
+    width: 70.65217%;
+    float: left;
+    margin-right: 1.08696%;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  /* line 28, /Users/hholz/coding/ruby/integrating/sass/core/nav/_nav-layout.scss */
+  .primary-navigation .simple-search {
+    width: 28.26087%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navigation.scss */
+.primary-navigation {
+  background-color: #5d887e;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #709d93), color-stop(50%, #5d887e), color-stop(100%, #46675f));
+  background-image: -webkit-linear-gradient(#709d93, #5d887e, #46675f);
+  background-image: -moz-linear-gradient(#709d93, #5d887e, #46675f);
+  background-image: -o-linear-gradient(#709d93, #5d887e, #46675f);
+  background-image: linear-gradient(#709d93, #5d887e, #46675f);
+  border-top: 1px solid #86aca3;
+  border-bottom: 1px solid #293c38;
+}
+
+/* line 4, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist {
+  position: relative;
+}
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+/* line 13, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  float: left;
+}
+/* line 19, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li > a {
+  display: block;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: #7da69d 0 1px;
+  color: black;
+}
+/* line 18, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.primary-navlist > ul > li > a:visited {
+  color: black;
+}
+/* line 21, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.primary-navlist > ul > li > a:focus {
+  color: #f2f2f2;
+}
+/* line 24, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.primary-navlist > ul > li > a:hover {
+  color: #f2f2f2;
+}
+/* line 27, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.primary-navlist > ul > li > a:active {
+  color: #f2f2f2;
+}
+/* line 26, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li > a:link, .primary-navlist > ul > li > a:hover, .primary-navlist > ul > li > a:visited, .primary-navlist > ul > li > a:active, .primary-navlist > ul > li > a:focus {
+  padding: 0.2em 1em;
+}
+/* line 29, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li .slide {
+  text-indent: 1em;
+  padding: 0.2em 0;
+}
+/* line 33, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li .slide:after {
+  content: '\2730';
+  margin-left: .1em;
+}
+/* line 40, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li:hover > a {
+  background-color: #485f5a;
+}
+/* line 41, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li:hover > ul {
+  left: 0;
+}
+/* line 44, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li > ul {
+  float: none;
+  width: 9em;
+  position: absolute;
+  left: -999em;
+  top: 1.8em;
+  margin: 0;
+  list-style-type: none;
+  background-color: #5d887e;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #709d93), color-stop(50%, #5d887e), color-stop(100%, #46675f));
+  background-image: -webkit-linear-gradient(#709d93, #5d887e, #46675f);
+  background-image: -moz-linear-gradient(#709d93, #5d887e, #46675f);
+  background-image: -o-linear-gradient(#709d93, #5d887e, #46675f);
+  background-image: linear-gradient(#709d93, #5d887e, #46675f);
+}
+/* line 56, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li > ul > li {
+  width: 9em;
+  margin: 0;
+}
+/* line 60, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li > ul > li > a {
+  width: 9em;
+  display: block;
+  margin: 0;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: #7da69d 0 1px;
+  color: black;
+}
+/* line 18, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.primary-navlist > ul > li > ul > li > a:visited {
+  color: black;
+}
+/* line 21, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.primary-navlist > ul > li > ul > li > a:focus {
+  color: #f2f2f2;
+}
+/* line 24, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.primary-navlist > ul > li > ul > li > a:hover {
+  color: #f2f2f2;
+}
+/* line 27, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.primary-navlist > ul > li > ul > li > a:active {
+  color: #f2f2f2;
+}
+/* line 69, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li > ul > li > a:link, .primary-navlist > ul > li > ul > li > a:hover, .primary-navlist > ul > li > ul > li > a:visited, .primary-navlist > ul > li > ul > li > a:active, .primary-navlist > ul > li > ul > li > a:focus {
+  padding: 0.2em 1em;
+}
+/* line 70, /Users/hholz/coding/ruby/integrating/sass/core/nav/_primary-navlist.scss */
+.primary-navlist > ul > li > ul > li > a:hover {
+  background-color: #485f5a;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/nav/_simple-search.scss */
+.simple-search form {
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+/* line 9, /Users/hholz/coding/ruby/integrating/sass/core/nav/_simple-search.scss */
+.simple-search form fieldset {
+  width: 95%;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 15, /Users/hholz/coding/ruby/integrating/sass/core/nav/_simple-search.scss */
+.simple-search form fieldset .search {
+  width: 99%;
+  color: #565c5b;
+  background-color: #86aca3;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 5px #618e84;
+  -moz-box-shadow: 0 1px 5px #618e84;
+  box-shadow: 0 1px 5px #618e84;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  padding: .3em .5em .1em;
+  border: 1px solid #486a62;
+}
+/* line 28, /Users/hholz/coding/ruby/integrating/sass/core/nav/_simple-search.scss */
+.simple-search form fieldset .search:focus {
+  color: black;
+  background-color: #c2d5d1;
+  -webkit-box-shadow: 0 0 4px #e2e8e7, inset 0 0 3px #e2e8e7;
+  -moz-box-shadow: 0 0 4px #e2e8e7, inset 0 0 3px #e2e8e7;
+  box-shadow: 0 0 4px #e2e8e7, inset 0 0 3px #e2e8e7;
+  outline: none;
+}
+
+/* line 42, /Users/hholz/coding/ruby/integrating/sass/core/nav/_simple-search.scss */
+.no-placeholder .simple-search .search {
+  background: #86aca3 url('/images/search.png?1346475000') 0.3em 0.25em no-repeat;
+  text-indent: 1.3em;
+}
+
+/* line 4, /Users/hholz/coding/ruby/integrating/sass/core/content/_content.scss */
+.content {
+  color: #444444;
+  background-color: #fafafa;
+}
+/* line 8, /Users/hholz/coding/ruby/integrating/sass/core/content/_content.scss */
+.content a {
+  color: #219cba;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #219cba;
+}
+/* line 18, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.content a:visited {
+  color: #19778f;
+}
+/* line 21, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.content a:focus {
+  color: #88563f;
+}
+/* line 24, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.content a:hover {
+  color: #88563f;
+}
+/* line 27, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.content a:active {
+  color: #88563f;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_layout.scss */
+.content {
+  margin: 0;
+  padding: 2.27273%;
+}
+@media (max-width: 35em) {
+  /* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_layout.scss */
+  .content {
+    overflow: hidden;
+  }
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_layout.scss */
+  .content {
+    overflow: hidden;
+    padding: 2.94118%;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_layout.scss */
+  .content {
+    width: 70.65217%;
+    float: left;
+    margin-right: 1.08696%;
+    margin-right: 0;
+    padding: 2.17391%;
+  }
+}
+
+/* line 2, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+.main-content > .content > header,
+.excerpt > header {
+  overflow: hidden;
+  *zoom: 1;
+}
+@media (max-width: 35em) {
+  /* line 10, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header time,
+  .excerpt > header time {
+    width: 52.27273%;
+    float: left;
+    margin-right: 2.27273%;
+  }
+  /* line 12, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header a[rel="bookmark"],
+  .excerpt > header a[rel="bookmark"] {
+    width: 45.45455%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 16, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header .tag-links, .main-content > .content > header .page-title, .main-content > .content > header menu[label="share"],
+  .excerpt > header .tag-links,
+  .excerpt > header .page-title,
+  .excerpt > header menu[label="share"] {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 24, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header time,
+  .excerpt > header time {
+    width: 25%;
+    float: left;
+    margin-right: 1.47059%;
+  }
+  /* line 25, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header a[rel="bookmark"],
+  .excerpt > header a[rel="bookmark"] {
+    width: 11.76471%;
+    float: left;
+    margin-right: 1.47059%;
+  }
+  /* line 26, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header .tag-links,
+  .excerpt > header .tag-links {
+    width: 60.29412%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 32, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header time,
+  .excerpt > header time {
+    width: 26.15385%;
+    float: left;
+    margin-right: 1.53846%;
+  }
+  /* line 33, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header a[rel="bookmark"],
+  .excerpt > header a[rel="bookmark"] {
+    width: 12.30769%;
+    float: left;
+    margin-right: 1.53846%;
+  }
+  /* line 34, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header .tag-links,
+  .excerpt > header .tag-links {
+    width: 58.46154%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 45, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header .page-title {
+    width: 69.11765%;
+    float: left;
+    margin-right: 1.47059%;
+  }
+  /* line 49, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header menu[label="share"] {
+    width: 29.41176%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 60, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header .page-title {
+    width: 72.30769%;
+    float: left;
+    margin-right: 1.53846%;
+  }
+  /* line 64, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .main-content > .content > header menu[label="share"] {
+    width: 26.15385%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 76, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .excerpt > header h1 {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 84, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_header-layout.scss */
+  .excerpt > header h1 {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+.content > footer {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 4, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+.content > footer .tag-links {
+  clear: both;
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 10, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer menu[label="share"] {
+    width: 29.41176%;
+    float: left;
+    margin-right: 1.47059%;
+  }
+  /* line 14, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer .tag-links, .content > footer time {
+    clear: none;
+    width: 69.11765%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 19, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer time {
+    text-align: right;
+  }
+  /* line 21, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer a[rel="prev"] {
+    width: 47.05882%;
+    float: left;
+    margin-right: 1.47059%;
+  }
+  /* line 22, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer a[rel="next"] {
+    width: 47.05882%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 30, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer menu[label="share"] {
+    width: 30.76923%;
+    float: left;
+    margin-right: 1.53846%;
+  }
+  /* line 34, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer .tag-links, .content > footer time {
+    clear: none;
+    width: 67.69231%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 39, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer time {
+    text-align: right;
+  }
+  /* line 41, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer a[rel="prev"] {
+    width: 49.23077%;
+    float: left;
+    margin-right: 1.53846%;
+  }
+  /* line 42, /Users/hholz/coding/ruby/integrating/sass/core/content/layout/_footer-layout.scss */
+  .content > footer a[rel="next"] {
+    width: 49.23077%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/_date-published.scss */
+time[itemprop="datePublished"], time[itemprop="dateModified"] {
+  color: #a9c4cb;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+/* line 9, /Users/hholz/coding/ruby/integrating/sass/core/content/_date-published.scss */
+time[itemprop="datePublished"], time[itemprop="datePublished"] .month, time[itemprop="datePublished"] .day, time[itemprop="dateModified"], time[itemprop="dateModified"] .month, time[itemprop="dateModified"] .day {
+  display: inline-block;
+}
+
+/* line 12, /Users/hholz/coding/ruby/integrating/sass/core/content/_date-published.scss */
+time[itemprop="dateModified"]:before {
+  content: 'last updated';
+  font-variant: normal;
+  font-style: italic;
+  display: inline;
+  margin: 0;
+  padding: 0 .2em 0 .5em;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/_permalink.scss */
+a[rel=bookmark] {
+  text-decoration: none;
+  padding: 0 0.5em;
+  margin: 0;
+}
+/* line 4, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+a[rel=bookmark]:hover {
+  text-decoration: underline;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/_page-title.scss */
+h1.page-title {
+  margin: 0;
+}
+/* line 4, /Users/hholz/coding/ruby/integrating/sass/core/content/_page-title.scss */
+h1.page-title a {
+  color: #5a6864;
+}
+/* line 18, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+h1.page-title a:visited {
+  color: #5a6864;
+}
+/* line 24, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+h1.page-title a:hover {
+  color: #19778f;
+}
+/* line 27, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+h1.page-title a:active {
+  color: #19778f;
+}
+
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/core/content/_toc.scss */
+#toc + ul li {
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
+/* line 5, /Users/hholz/coding/ruby/integrating/sass/core/content/_toc.scss */
+#toc + ul li a {
+  font-weight: normal;
+}
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/core/content/_toc.scss */
+#toc + ul li > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/_article-header.scss */
+article > header {
+  margin-bottom: 0.5em;
+}
+/* line 8, /Users/hholz/coding/ruby/integrating/sass/core/content/_article-header.scss */
+article > header time[itemprop="datePublished"],
+article > header time[itemprop="dateModified"],
+article > header a[rel="bookmark"],
+article > header .tag-links {
+  margin-bottom: .5em;
+}
+/* line 13, /Users/hholz/coding/ruby/integrating/sass/core/content/_article-header.scss */
+article > header time[itemprop="datePublished"],
+article > header time[itemprop="dateModified"] {
+  text-transform: uppercase;
+}
+/* line 17, /Users/hholz/coding/ruby/integrating/sass/core/content/_article-header.scss */
+article > header a {
+  color: #5a6864;
+}
+/* line 18, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article > header a:visited {
+  color: #5a6864;
+}
+/* line 21, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article > header a:focus {
+  color: #19778f;
+}
+/* line 24, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article > header a:hover {
+  color: #19778f;
+}
+/* line 27, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article > header a:active {
+  color: #19778f;
+}
+/* line 19, /Users/hholz/coding/ruby/integrating/sass/core/content/_article-header.scss */
+article > header menu[label="share"] {
+  margin-top: .5em;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/_article-footer.scss */
+article > footer {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 4, /Users/hholz/coding/ruby/integrating/sass/core/content/_article-excerpt.scss */
+article.excerpt > header > h1 {
+  margin: 0;
+  color: #444444;
+  font-size: 1.8em;
+  line-height: 1.44444em;
+}
+/* line 8, /Users/hholz/coding/ruby/integrating/sass/core/content/_article-excerpt.scss */
+article.excerpt > header > h1 a {
+  color: #577b84;
+}
+/* line 18, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article.excerpt > header > h1 a:visited {
+  color: #577b84;
+}
+/* line 21, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article.excerpt > header > h1 a:focus {
+  color: #378ea4;
+}
+/* line 24, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article.excerpt > header > h1 a:hover {
+  color: #378ea4;
+}
+/* line 27, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article.excerpt > header > h1 a:active {
+  color: #378ea4;
+}
+/* line 15, /Users/hholz/coding/ruby/integrating/sass/core/content/_article-excerpt.scss */
+article.excerpt a[rel=full-article] {
+  font-weight: normal;
+  display: inline-block;
+  padding-left: .3em;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/_page-nav.scss */
+.page-nav {
+  padding-top: 1em;
+  clear: both;
+}
+/* line 5, /Users/hholz/coding/ruby/integrating/sass/core/content/_page-nav.scss */
+.page-nav a[rel="prev"] {
+  padding-right: 1em;
+}
+/* line 6, /Users/hholz/coding/ruby/integrating/sass/core/content/_page-nav.scss */
+.page-nav a[rel="next"] {
+  padding-left: 1em;
+  text-align: right;
+}
+
+/* non highlighted code colors */
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.highlight, html .gist .gist-file .gist-syntax .gist-highlight {
+  border: 1px solid #d8d8d8;
+}
+/* line 2, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.highlight table td.code, html .gist .gist-file .gist-syntax .gist-highlight table td.code {
+  width: 100%;
+}
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.highlight .line-numbers, html .gist .gist-file .gist-syntax .gist-highlight .line-numbers {
+  text-align: right;
+  background: #fefefe;
+  border-right: 1px solid #e0e0e0;
+  -webkit-box-shadow: white -1px 0 inset;
+  -moz-box-shadow: white -1px 0 inset;
+  box-shadow: white -1px 0 inset;
+  text-shadow: #eaeaea 0 -1px;
+  padding: .8em;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 16, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.highlight .line-numbers span, html .gist .gist-file .gist-syntax .gist-highlight .line-numbers span {
+  color: #93a1a1;
+}
+
+/* line 22, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+figure.code, .gist-file, pre {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
+}
+/* line 24, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+figure.code .highlight pre, .gist-file .highlight pre, pre .highlight pre {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 27, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+pre .line.marked {
+  position: relative;
+  display: block;
+}
+/* line 30, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+pre .line.marked:after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 186, 255, 0.03);
+  left: -0.8em;
+  top: 0;
+  bottom: 0;
+  right: -0.8em;
+  border: 1px solid;
+  border-left-color: rgba(0, 186, 255, 0.5);
+  border-left-width: 2px;
+  border-right-color: rgba(0, 186, 255, 0.13);
+  border-top: 0;
+  border-bottom: 0;
+}
+/* line 42, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+pre .line.marked.start:after {
+  border-top: 1px solid rgba(0, 186, 255, 0.13);
+}
+/* line 43, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+pre .line.marked.end:after {
+  border-bottom: 1px solid rgba(0, 186, 255, 0.13);
+}
+
+/* line 46, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+html .gist .gist-file {
+  margin-bottom: 1.8em;
+  position: relative;
+  border: none;
+  padding-top: 26px;
+}
+/* line 51, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+html .gist .gist-file .gist-syntax {
+  border-bottom: 0;
+  background: none;
+}
+/* line 54, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+html .gist .gist-file .gist-syntax .gist-highlight {
+  background: #fbfbfb;
+}
+/* line 61, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+html .gist .gist-file .gist-meta {
+  padding: .6em 0.8em;
+  border: 1px solid #eaeaea;
+  color: #93a1a1;
+  font-size: 0.7em;
+  line-height: 1.85714em;
+  background: white;
+  border: 1px solid #d8d8d8;
+  border-top: 1px solid white;
+  line-height: 1.5em;
+}
+/* line 75, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+html .gist .gist-file .gist-meta a {
+  color: #75878b;
+  text-decoration: none;
+}
+/* line 4, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+html .gist .gist-file .gist-meta a:hover {
+  text-decoration: underline;
+}
+/* line 78, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+html .gist .gist-file .gist-meta a:hover {
+  color: #586e75;
+}
+/* line 80, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+html .gist .gist-file .gist-meta a[href*='#file'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -10px;
+  color: #474747;
+}
+/* line 84, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+html .gist .gist-file .gist-meta a[href*='#file']:hover {
+  color: #219cba;
+}
+/* line 86, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+html .gist .gist-file .gist-meta a[href*=raw] {
+  top: .4em;
+}
+
+/* line 92, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+pre {
+  background: #fbfbfb;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em;
+  border: 1px solid #d8d8d8;
+  margin-bottom: 2.1em;
+  padding: .8em 1em;
+  color: #586e75;
+  overflow: auto;
+}
+
+/* line 104, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+h3.filename + pre {
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+/* line 108, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+p code, li code {
+  display: inline-block;
+  white-space: nowrap;
+  background: #fff;
+  color: #555;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em;
+  padding: 0 .3em;
+  margin: -1px 0;
+}
+/* line 119, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+p pre code, li pre code {
+  background: none;
+  border: none;
+}
+
+/* line 122, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code, html .gist .gist-file .gist-syntax .gist-highlight pre, .highlight code {
+  overflow: scroll;
+  overflow-y: hidden;
+  display: block;
+  padding: .8em;
+  overflow-x: auto;
+  line-height: 1.45em;
+  background: #fbfbfb;
+  color: #586e75;
+}
+/* line 133, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .c, html .gist .gist-file .gist-syntax .gist-highlight pre .c, .highlight code .c {
+  color: #93a1a1;
+  font-style: italic;
+}
+/* line 134, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .cm, html .gist .gist-file .gist-syntax .gist-highlight pre .cm, .highlight code .cm {
+  color: #93a1a1;
+  font-style: italic;
+}
+/* line 135, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .cp, html .gist .gist-file .gist-syntax .gist-highlight pre .cp, .highlight code .cp {
+  color: #93a1a1;
+  font-style: italic;
+}
+/* line 136, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .c1, html .gist .gist-file .gist-syntax .gist-highlight pre .c1, .highlight code .c1 {
+  color: #93a1a1;
+  font-style: italic;
+}
+/* line 137, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .cs, html .gist .gist-file .gist-syntax .gist-highlight pre .cs, .highlight code .cs {
+  color: #93a1a1;
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 140, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .o, html .gist .gist-file .gist-syntax .gist-highlight pre .o, .highlight code .o {
+  color: #586e75;
+  font-weight: bold;
+}
+/* line 141, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .p, html .gist .gist-file .gist-syntax .gist-highlight pre .p, .highlight code .p {
+  color: #586e75;
+}
+/* line 142, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .ow, html .gist .gist-file .gist-syntax .gist-highlight pre .ow, .highlight code .ow {
+  color: #2aa198;
+  font-weight: bold;
+}
+/* line 144, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .gd, html .gist .gist-file .gist-syntax .gist-highlight pre .gd, .highlight code .gd {
+  color: #586e75;
+  background-color: #f3c8c8;
+  display: inline-block;
+}
+/* line 147, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .gd .x, html .gist .gist-file .gist-syntax .gist-highlight pre .gd .x, .highlight code .gd .x {
+  color: #586e75;
+  background-color: #f0b4b3;
+  display: inline-block;
+}
+/* line 150, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .ge, html .gist .gist-file .gist-syntax .gist-highlight pre .ge, .highlight code .ge {
+  color: #586e75;
+  font-style: italic;
+}
+/* line 152, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .gh, html .gist .gist-file .gist-syntax .gist-highlight pre .gh, .highlight code .gh {
+  color: #93a1a1;
+}
+/* line 153, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .gi, html .gist .gist-file .gist-syntax .gist-highlight pre .gi, .highlight code .gi {
+  color: #586e75;
+  background-color: #e3e7c8;
+  display: inline-block;
+}
+/* line 156, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .gi .x, html .gist .gist-file .gist-syntax .gist-highlight pre .gi .x, .highlight code .gi .x {
+  color: #586e75;
+  background-color: #cbd396;
+  display: inline-block;
+}
+/* line 161, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .gs, html .gist .gist-file .gist-syntax .gist-highlight pre .gs, .highlight code .gs {
+  color: #586e75;
+  font-weight: bold;
+}
+/* line 162, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .gu, html .gist .gist-file .gist-syntax .gist-highlight pre .gu, .highlight code .gu {
+  color: #6c71c4;
+}
+/* line 165, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .err, html .gist .gist-file .gist-syntax .gist-highlight pre .err, .highlight code .err {
+  color: #dc322f;
+  background: none;
+}
+/* line 166, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .k, html .gist .gist-file .gist-syntax .gist-highlight pre .k, .highlight code .k {
+  color: #cb4b16;
+}
+/* line 167, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .kc, html .gist .gist-file .gist-syntax .gist-highlight pre .kc, .highlight code .kc {
+  color: #859900;
+  font-weight: bold;
+}
+/* line 168, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .kd, html .gist .gist-file .gist-syntax .gist-highlight pre .kd, .highlight code .kd {
+  color: #268bd2;
+}
+/* line 169, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .kp, html .gist .gist-file .gist-syntax .gist-highlight pre .kp, .highlight code .kp {
+  color: #cb4b16;
+  font-weight: bold;
+}
+/* line 170, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .kr, html .gist .gist-file .gist-syntax .gist-highlight pre .kr, .highlight code .kr {
+  color: #d33682;
+  font-weight: bold;
+}
+/* line 171, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .kt, html .gist .gist-file .gist-syntax .gist-highlight pre .kt, .highlight code .kt {
+  color: #2aa198;
+}
+/* line 172, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .n, html .gist .gist-file .gist-syntax .gist-highlight pre .n, .highlight code .n {
+  color: #268bd2;
+}
+/* line 173, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .na, html .gist .gist-file .gist-syntax .gist-highlight pre .na, .highlight code .na {
+  color: #268bd2;
+}
+/* line 174, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .nb, html .gist .gist-file .gist-syntax .gist-highlight pre .nb, .highlight code .nb {
+  color: #859900;
+}
+/* line 175, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .nc, html .gist .gist-file .gist-syntax .gist-highlight pre .nc, .highlight code .nc {
+  color: #d33682;
+}
+/* line 176, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .no, html .gist .gist-file .gist-syntax .gist-highlight pre .no, .highlight code .no {
+  color: #b58900;
+}
+/* line 178, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .nl, html .gist .gist-file .gist-syntax .gist-highlight pre .nl, .highlight code .nl {
+  color: #859900;
+}
+/* line 179, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .ne, html .gist .gist-file .gist-syntax .gist-highlight pre .ne, .highlight code .ne {
+  color: #268bd2;
+  font-weight: bold;
+}
+/* line 180, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .nf, html .gist .gist-file .gist-syntax .gist-highlight pre .nf, .highlight code .nf {
+  color: #268bd2;
+  font-weight: bold;
+}
+/* line 181, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .nn, html .gist .gist-file .gist-syntax .gist-highlight pre .nn, .highlight code .nn {
+  color: #b58900;
+}
+/* line 182, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .nt, html .gist .gist-file .gist-syntax .gist-highlight pre .nt, .highlight code .nt {
+  color: #268bd2;
+  font-weight: bold;
+}
+/* line 183, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .nx, html .gist .gist-file .gist-syntax .gist-highlight pre .nx, .highlight code .nx {
+  color: #b58900;
+}
+/* line 186, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .vg, html .gist .gist-file .gist-syntax .gist-highlight pre .vg, .highlight code .vg {
+  color: #268bd2;
+}
+/* line 187, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .vi, html .gist .gist-file .gist-syntax .gist-highlight pre .vi, .highlight code .vi {
+  color: #268bd2;
+}
+/* line 188, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .nv, html .gist .gist-file .gist-syntax .gist-highlight pre .nv, .highlight code .nv {
+  color: #268bd2;
+}
+/* line 190, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .mf, html .gist .gist-file .gist-syntax .gist-highlight pre .mf, .highlight code .mf {
+  color: #2aa198;
+}
+/* line 191, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .m, html .gist .gist-file .gist-syntax .gist-highlight pre .m, .highlight code .m {
+  color: #2aa198;
+}
+/* line 192, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .mh, html .gist .gist-file .gist-syntax .gist-highlight pre .mh, .highlight code .mh {
+  color: #2aa198;
+}
+/* line 193, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .mi, html .gist .gist-file .gist-syntax .gist-highlight pre .mi, .highlight code .mi {
+  color: #2aa198;
+}
+/* line 195, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .s, html .gist .gist-file .gist-syntax .gist-highlight pre .s, .highlight code .s {
+  color: #2aa198;
+}
+/* line 198, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .sd, html .gist .gist-file .gist-syntax .gist-highlight pre .sd, .highlight code .sd {
+  color: #2aa198;
+}
+/* line 199, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .s2, html .gist .gist-file .gist-syntax .gist-highlight pre .s2, .highlight code .s2 {
+  color: #2aa198;
+}
+/* line 200, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .se, html .gist .gist-file .gist-syntax .gist-highlight pre .se, .highlight code .se {
+  color: #dc322f;
+}
+/* line 202, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .si, html .gist .gist-file .gist-syntax .gist-highlight pre .si, .highlight code .si {
+  color: #268bd2;
+}
+/* line 204, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .sr, html .gist .gist-file .gist-syntax .gist-highlight pre .sr, .highlight code .sr {
+  color: #2aa198;
+}
+/* line 205, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code .s1, html .gist .gist-file .gist-syntax .gist-highlight pre .s1, .highlight code .s1 {
+  color: #2aa198;
+}
+/* line 208, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.pre-code div .gd, html .gist .gist-file .gist-syntax .gist-highlight pre div .gd, .highlight code div .gd, .pre-code div .gd .x, html .gist .gist-file .gist-syntax .gist-highlight pre div .gd .x, .highlight code div .gd .x, .pre-code div .gi, html .gist .gist-file .gist-syntax .gist-highlight pre div .gi, .highlight code div .gi, .pre-code div .gi .x, html .gist .gist-file .gist-syntax .gist-highlight pre div .gi .x, .highlight code div .gi .x {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 212, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.highlight,
+.gist-highlight {
+  margin-bottom: 1.8em;
+  background: #fbfbfb;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+/* line 213, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.highlight pre,
+.gist-highlight pre {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* -webkit-scrollbar and -webkit-scrollbar-thumb are undocumented properties
+$solar-scroll-bg: rgba(#fff, .15);
+$solar-scroll-thumb: rgba(#fff, .2);
+@if lightness($base03) > lightness(#555) {
+  $solar-scroll-bg: rgba(#000, .15);
+  $solar-scroll-thumb: rgba(#000, .15);
+}
+
+pre, .highlight, .gist-highlight {
+  &::-webkit-scrollbar {  height: .5em; background: $solar-scroll-bg; }
+  &::-webkit-scrollbar-thumb:horizontal { 
+    background: $solar-scroll-thumb;
+    -webkit-border-radius: 4px; border-radius: 4px 
+  }
+} */
+/* line 242, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.highlight code {
+  background: #000;
+}
+
+/* line 243, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+figure.code {
+  background: none;
+  padding: 0;
+  border: 0;
+  margin-bottom: 1.5em;
+}
+/* line 248, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+figure.code pre {
+  margin-bottom: 0;
+}
+/* line 249, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+figure.code figcaption {
+  position: relative;
+}
+/* line 254, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+figure.code .highlight {
+  margin-bottom: 0;
+}
+
+/* line 265, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.code-title, html .gist .gist-file .gist-meta a[href*='#file'], h3.filename, figure.code figcaption {
+  text-align: center;
+  margin-bottom: 0;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #aaaaaa;
+  text-shadow: #fff 0 1px 0;
+  color: #777;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(6%, #f0f0f0), color-stop(90%, #e5e5e5), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(#ffffff, #f0f0f0 6%, #e5e5e5 90%, #dddddd);
+  background-image: -moz-linear-gradient(#ffffff, #f0f0f0 6%, #e5e5e5 90%, #dddddd);
+  background-image: -o-linear-gradient(#ffffff, #f0f0f0 6%, #e5e5e5 90%, #dddddd);
+  background-image: linear-gradient(#ffffff, #f0f0f0 6%, #e5e5e5 90%, #dddddd);
+  border: 1px solid #c5c5c5;
+  border-top-color: #d5d5d5;
+  border-bottom: 0;
+}
+
+/* line 295, /Users/hholz/coding/ruby/integrating/sass/core/content/_included_code.scss */
+.download-source, html .gist .gist-file .gist-meta a[href*=raw], figure.code figcaption a {
+  position: absolute;
+  right: .8em;
+  text-decoration: none;
+  color: inherit;
+  z-index: 1;
+  padding-left: 3em;
+}
+/* line 4, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+.download-source:hover, html .gist .gist-file .gist-meta a[href*=raw]:hover, figure.code figcaption a:hover {
+  text-decoration: underline;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/content/_comments.scss */
+section[itemprop="comment"] {
+  margin-top: 1em;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/menu/_follow-menu.scss */
+menu[label=follow]:after {
+  content: "follow on";
+  color: #c0d8d2;
+  display: inline;
+  float: right;
+  margin: 0;
+  padding-top: .2em;
+  padding-right: .6em;
+}
+
+/* line 11, /Users/hholz/coding/ruby/integrating/sass/core/menu/_follow-menu.scss */
+.follow-button, li.delicious-follow,
+li.github-follow,
+li.googleplus-follow,
+li.rss-follow {
+  margin: 0;
+}
+/* line 14, /Users/hholz/coding/ruby/integrating/sass/core/menu/_follow-menu.scss */
+.follow-button img, li.delicious-follow img,
+li.github-follow img,
+li.googleplus-follow img,
+li.rss-follow img {
+  background-color: #fafafa;
+  border: 1px solid #c0d8d2;
+  vertical-align: middle;
+}
+
+/* line 29, /Users/hholz/coding/ruby/integrating/sass/core/menu/_follow-menu.scss */
+menu[label=follow] {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 60, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+menu[label=follow] li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: right;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+}
+/* line 48, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+menu[label=follow] li:first-child, menu[label=follow] li.first {
+  padding-right: 0;
+}
+/* line 49, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+menu[label=follow] li:last-child {
+  padding-left: 0;
+}
+/* line 50, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+menu[label=follow] li.last {
+  padding-left: 0;
+}
+
+/* line 30, /Users/hholz/coding/ruby/integrating/sass/core/menu/_follow-menu.scss */
+.follow-button img, li.delicious-follow img,
+li.github-follow img,
+li.googleplus-follow img,
+li.rss-follow img {
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
+}
+
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 34, /Users/hholz/coding/ruby/integrating/sass/core/menu/_follow-menu.scss */
+  menu[label=follow] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+  }
+  /* line 60, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  menu[label=follow] li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    white-space: nowrap;
+    display: inline;
+    float: right;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
+  /* line 48, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  menu[label=follow] li:first-child, menu[label=follow] li.first {
+    padding-right: 0;
+  }
+  /* line 49, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  menu[label=follow] li:last-child {
+    padding-left: 0;
+  }
+  /* line 50, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  menu[label=follow] li.last {
+    padding-left: 0;
+  }
+
+  /* line 35, /Users/hholz/coding/ruby/integrating/sass/core/menu/_follow-menu.scss */
+  .follow-button img, li.delicious-follow img,
+  li.github-follow img,
+  li.googleplus-follow img,
+  li.rss-follow img {
+    -moz-border-radius-bottomleft: 0.3em;
+    -webkit-border-bottom-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    -moz-border-radius-bottomright: 0.3em;
+    -webkit-border-bottom-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 43, /Users/hholz/coding/ruby/integrating/sass/core/menu/_follow-menu.scss */
+  menu[label=follow] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+  }
+  /* line 60, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  menu[label=follow] li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    white-space: nowrap;
+    display: inline;
+    float: right;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+  }
+  /* line 48, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  menu[label=follow] li:first-child, menu[label=follow] li.first {
+    padding-right: 0;
+  }
+  /* line 49, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  menu[label=follow] li:last-child {
+    padding-left: 0;
+  }
+  /* line 50, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+  menu[label=follow] li.last {
+    padding-left: 0;
+  }
+
+  /* line 44, /Users/hholz/coding/ruby/integrating/sass/core/menu/_follow-menu.scss */
+  .follow-button img, li.delicious-follow img,
+  li.github-follow img,
+  li.googleplus-follow img,
+  li.rss-follow img {
+    -moz-border-radius-bottomleft: 0.3em;
+    -webkit-border-bottom-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    -moz-border-radius-bottomright: 0.3em;
+    -webkit-border-bottom-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/core/menu/_sharing-menu.scss */
+menu[label="share"]:after {
+  content: "share";
+  color: #a9c4cb;
+  display: inline;
+  float: right;
+  margin: 0;
+  padding-top: .2em;
+  padding-right: .6em;
+}
+
+/* line 14, /Users/hholz/coding/ruby/integrating/sass/core/menu/_sharing-menu.scss */
+.share-button, li.twitter-share,
+li.googleplus-share,
+li.facebook-share {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  display: inline;
+  float: right;
+  margin: 0;
+}
+/* line 48, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.share-button:first-child, li.twitter-share:first-child,
+li.googleplus-share:first-child,
+li.facebook-share:first-child, .share-button.first, li.first.twitter-share,
+li.first.googleplus-share,
+li.first.facebook-share {
+  padding-left: 0;
+}
+/* line 49, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.share-button:last-child, li.twitter-share:last-child,
+li.googleplus-share:last-child,
+li.facebook-share:last-child {
+  padding-right: 0;
+}
+/* line 50, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.share-button.last, li.last.twitter-share,
+li.last.googleplus-share,
+li.last.facebook-share {
+  padding-right: 0;
+}
+/* line 20, /Users/hholz/coding/ruby/integrating/sass/core/menu/_sharing-menu.scss */
+.share-button img, li.twitter-share img,
+li.googleplus-share img,
+li.facebook-share img {
+  background-color: #fafafa;
+  border: 2px groove white;
+  padding: 4px;
+  vertical-align: middle;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/menu/_tag-links.scss */
+.tag-links {
+  display: inline-block;
+  padding-left: 1em;
+}
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/core/menu/_tag-links.scss */
+.tag-links > ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  display: inline;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+/* line 60, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.tag-links > ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+}
+/* line 48, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.tag-links > ul li:first-child, .tag-links > ul li.first {
+  padding-left: 0;
+}
+/* line 49, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.tag-links > ul li:last-child {
+  padding-right: 0;
+}
+/* line 50, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.tag-links > ul li.last {
+  padding-right: 0;
+}
+/* line 14, /Users/hholz/coding/ruby/integrating/sass/core/menu/_tag-links.scss */
+.tag-links > ul > li {
+  margin: 0;
+}
+/* line 17, /Users/hholz/coding/ruby/integrating/sass/core/menu/_tag-links.scss */
+.tag-links > ul > li:after {
+  content: ',';
+  color: #a9c4cb;
+  padding-right: .1em;
+}
+/* line 24, /Users/hholz/coding/ruby/integrating/sass/core/menu/_tag-links.scss */
+.tag-links > ul > li:nth-last-child(2):after {
+  content: none;
+}
+/* line 28, /Users/hholz/coding/ruby/integrating/sass/core/menu/_tag-links.scss */
+.tag-links > ul > li:last-child:before {
+  content: 'and';
+  color: #a9c4cb;
+  padding-left: .1em;
+  padding-right: .2em;
+}
+/* line 34, /Users/hholz/coding/ruby/integrating/sass/core/menu/_tag-links.scss */
+.tag-links > ul > li:last-child:after {
+  content: none;
+  padding: 0;
+}
+/* line 40, /Users/hholz/coding/ruby/integrating/sass/core/menu/_tag-links.scss */
+.tag-links > ul > li:first-child:before {
+  content: 'posted under';
+  color: #a9c4cb;
+  padding-left: .1em;
+  padding-right: .2em;
+}
+
+/* line 10, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#grid {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -2em;
+}
+/* line 18, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#grid #credits {
+  height: 2em;
+}
+
+/* line 20, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#contentinfo {
+  clear: both;
+  position: relative;
+  height: 2em;
+}
+
+/* line 4, /Users/hholz/coding/ruby/integrating/sass/core/credits/_credits-layout.scss */
+footer.credits {
+  padding: 0 2.27273%;
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 4, /Users/hholz/coding/ruby/integrating/sass/core/credits/_credits-layout.scss */
+  footer.credits {
+    padding-left: 2.94118%;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 4, /Users/hholz/coding/ruby/integrating/sass/core/credits/_credits-layout.scss */
+  footer.credits {
+    padding-left: 2.17391%;
+  }
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/core/credits/_footer.scss */
+footer.credits {
+  color: #f2f2f2;
+  background-color: #485f5a;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #303f3c), color-stop(50%, #485f5a), color-stop(100%, #5a7770));
+  background-image: -webkit-linear-gradient(#303f3c, #485f5a, #5a7770);
+  background-image: -moz-linear-gradient(#303f3c, #485f5a, #5a7770);
+  background-image: -o-linear-gradient(#303f3c, #485f5a, #5a7770);
+  background-image: linear-gradient(#303f3c, #485f5a, #5a7770);
+  text-shadow: #536e68 0 1px;
+  border-top: 1px solid #698b83;
+  border-bottom: 1px solid #273431;
+}
+/* line 16, /Users/hholz/coding/ruby/integrating/sass/core/credits/_footer.scss */
+footer.credits img {
+  vertical-align: middle;
+}
+/* line 18, /Users/hholz/coding/ruby/integrating/sass/core/credits/_footer.scss */
+footer.credits a {
+  color: #f2f2f2;
+}
+/* line 18, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+footer.credits a:visited {
+  color: #f2f2f2;
+}
+/* line 21, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+footer.credits a:focus {
+  color: #c0d8d2;
+}
+/* line 24, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+footer.credits a:hover {
+  color: #c0d8d2;
+}
+/* line 27, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+footer.credits a:active {
+  color: #c0d8d2;
+}
+/* line 23, /Users/hholz/coding/ruby/integrating/sass/core/credits/_footer.scss */
+footer.credits div {
+  padding-top: .3em;
+}
+
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-base.scss */
+.aside-base {
+  color: #5a6864;
+  text-shadow: #e8eeec 0 1px;
+  background-color: #d1dcd9;
+  border-color: #c3c7c6;
+}
+/* line 13, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-base.scss */
+.aside-base aside h1 {
+  margin: 0;
+  padding: 2.27273% 0 1.52273%;
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 13, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-base.scss */
+  .aside-base aside h1 {
+    padding: 0 0 0.98529%;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 13, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-base.scss */
+  .aside-base aside h1 {
+    padding: 1.08696% 0 0.72826%;
+  }
+}
+/* line 24, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-base.scss */
+.aside-base aside ul {
+  list-style: none;
+  margin: 0 0 0 1em;
+  padding: 0;
+}
+/* line 29, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-base.scss */
+.aside-base aside ul li {
+  margin: 0;
+  padding: 0 0 1.13636%;
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 29, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-base.scss */
+  .aside-base aside ul li {
+    padding: 0 0 0.73529%;
+  }
+}
+@media (min-width: 52.5em) {
+  /* line 29, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-base.scss */
+  .aside-base aside ul li {
+    padding: 0 0 0.54348%;
+  }
+}
+/* line 38, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-base.scss */
+.aside-base aside ul li a {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
+  word-wrap: break-word;
+  color: #19778f;
+}
+/* line 18, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.aside-base aside ul li a:visited {
+  color: #19778f;
+}
+/* line 21, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.aside-base aside ul li a:focus {
+  color: #219cba;
+}
+/* line 24, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.aside-base aside ul li a:hover {
+  color: #219cba;
+}
+/* line 27, /Users/hholz/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.aside-base aside ul li a:active {
+  color: #219cba;
+}
+
+/* line 1, /Users/hholz/coding/ruby/integrating/sass/aside/_index-layout.scss */
+.index-aside {
+  margin: 0;
+}
+/* line 4, /Users/hholz/coding/ruby/integrating/sass/aside/_index-layout.scss */
+.index-aside aside {
+  margin: 0;
+}
+@media (max-width: 35em) {
+  /* line 1, /Users/hholz/coding/ruby/integrating/sass/aside/_index-layout.scss */
+  .index-aside {
+    overflow: hidden;
+    padding: 2.27273%;
+    border-top: 1px solid #c3c7c6;
+  }
+}
+@media (min-width: 35em) and (max-width: 52.5em) {
+  /* line 1, /Users/hholz/coding/ruby/integrating/sass/aside/_index-layout.scss */
+  .index-aside {
+    overflow: hidden;
+    padding: 1.47059%;
+  }
+  /* line 18, /Users/hholz/coding/ruby/integrating/sass/aside/_index-layout.scss */
+  .index-aside .github {
+    width: 51.47059%;
+    float: left;
+    margin-right: 1.47059%;
+    margin-right: 0;
+    padding-right: 1.47059%;
+  }
+  /* line 23, /Users/hholz/coding/ruby/integrating/sass/aside/_index-layout.scss */
+  .index-aside .delicious {
+    width: 47.05882%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 52.5em) {
+  /* line 3, /Users/hholz/coding/ruby/integrating/sass/aside/_aside-right-layout.scss */
+  .aside-base {
+    width: 28.26087%;
+    float: right;
+    margin-right: 0;
+    padding: 1.08696%;
+    border-left: 1px solid #c3c7c6;
+    border-bottom: 1px solid #c3c7c6;
+  }
+}
+/* line 7, /Users/hholz/coding/ruby/integrating/sass/aside/_github.scss */
+aside.github > ul > li p {
+  font-size: 0.855em;
+  line-height: 1.2924em;
+  margin: 0 0 .5em 1em;
+}
+
+/* line 3, /Users/hholz/coding/ruby/integrating/sass/aside/_recent-posts.scss */
+aside.recent-posts h1 {
+  padding-top: 0;
+}

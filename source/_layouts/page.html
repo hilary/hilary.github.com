@@ -5,10 +5,12 @@ aside_style : default
 <article class="content">
   <header>
     <h1 class="page-title">{{ page.title }}</h1>
-    {{ page.date | date_published }}{{ page.updated | date_published modified }}
     {% include menus/sharing_menu.html %}
   </header>
   {{ content }}
-  {% include menus/sharing_menu.html %}
+  <footer>
+    {% include menus/sharing_menu.html %}
+    {{ page.date | date_published }}{{ page.updated | date_published modified }}
+  </footer>
   {% include sections/comments.html %}
 </article>

@@ -1,7 +1,6 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
 {% include head/head.html %}
-<body itemscope {% if page.body_id %} id="{{ page.body_id }}" {% endif %}
-      itemtype="http://schema.org/Blog">
+<body id="blog" itemscope itemtype="http://schema.org/Blog">
   <div id="grid">
     {% include sections/default_header.html %}
     <article class="main-content">

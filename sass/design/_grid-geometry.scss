@@ -3,7 +3,7 @@ $gutter-width             : .5em;
 $grid-padding             : 0;
 
 $container-style          : fluid;
-$show-grid-backgrounds    : true;
+// $show-grid-backgrounds    : true;
 
 $vertical-layout-columns  : 15; 
 $vertical-layout          : $vertical-layout-columns 40em;
@@ -11,15 +11,18 @@ $vertical-layout          : $vertical-layout-columns 40em;
 $horizontal-aside-columns : 23;
 $horizontal-aside-layout  : 40em $horizontal-aside-columns 60em;
 
-$aside-right-columns      : 31;
-$aside-right-layout       : 60em $aside-right-columns;
+$aside-right-columns         : 31;
+$aside-right-layout          : 60em $aside-right-columns;
+
+$aside-right-content-columns : 22;
+$aside-right-aside-columns   : $aside-right-columns - $aside-right-content-columns;
 
 body > div { 
   margin : 0;
   @include container($vertical-layout,         // $default
                      $horizontal-aside-layout, // wider, spread out aside
                      $aside-right-layout);     // full width, move aside to right
-//             @include susy-grid-background;  // for design and debugging
+//  @include susy-grid-background;  // for design and debugging
 }
 
 // for convenience
@@ -32,5 +35,4 @@ $horizontal-aside-single : columns(1, $horizontal-aside-columns);
 $aside-right-gutter      : gutter($aside-right-columns);
 $aside-right-single      : columns(1, $aside-right-columns); 
 $aside-right-space       : space(1, $aside-right-columns);
-
 

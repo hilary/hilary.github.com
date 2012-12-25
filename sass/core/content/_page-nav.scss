@@ -1,0 +1,10 @@
+.page-nav {
+  padding-top : 1em;
+  clear       : both;
+
+  a[rel="prev"] { padding-right : 1em; }
+  a[rel="next"] { 
+    padding-left : 1em;
+    text-align : right; 
+  }
+}

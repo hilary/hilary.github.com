@@ -1,0 +1,25 @@
+// fonts
+
+.sans  { font-family : Ubuntu, Trebuchet MS, Arial, sans-serif; }
+.main  { @extend .sans; }
+.aside { @extend .sans; }
+
+.serif  { font-family : Quando, Georgia, Times, Times New Roman, serif; }
+.header { @extend .serif; }
+.nav    { @extend .serif; }
+
+.mono    { font-family : Ubuntu+Mono, Menlo, Monaco, lucida console, Courier New, monospace; }
+.code_cl { @extend .mono; }
+
+.meta { font-size : .85em; }
+
+// useful styles
+
+.bullet { 
+  content : '\2022'; 
+  padding : 0 .4em;
+  display : inline-block;
+}
+
+.flex-content { max-width: 100%; height: auto; }
+

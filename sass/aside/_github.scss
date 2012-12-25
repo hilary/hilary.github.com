@@ -5,7 +5,7 @@ aside.github {
     a { @extend .code_cl }
 
     p {
-      @include adjust-font-size-to(.9*$aside-font-size, .8*$aside-lines);
+      @include adjust-font-size-to(.95*$aside-font-size, .85*$aside-lines);
       margin : 0 0 .5em 1em;
     }
 

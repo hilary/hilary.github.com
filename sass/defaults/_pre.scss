@@ -1,13 +1,4 @@
-// monofonts tend to be larger than polyfonts
-.mono { @include adjust-font-size-to(.9*$base-font-size); }
-
-.code_cl { 
-  @extend .mono;  
-  a { font-weight : bold; }
-}
-
 pre, code, kbd, var, tt, samp { 
-  @extend .code_cl;
   @include force-wrap;
   margin  : .5em 0;
   padding : .2em;

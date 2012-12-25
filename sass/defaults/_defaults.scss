@@ -1,17 +1,14 @@
-@import "compass/css3/box-sizing";
 * { @include box-sizing(border-box); }
 
-@import 'utilities';
-@import 'vertical';
-@import 'fonts';
+@import 'typography';
+@import 'pre';        // also code, kbd, var, tt, samp, ...
+@import 'quotes';     // blockquote, cite, q, mark, .pullquote
 
-// these partials use styles from the initial set imported above
-@import 'typography'; // global default styles
-@import 'aside';
 @import 'headers';    // also footers, meta
 @import 'nav';        // also menu, a, lists
-@import 'pre';        // also code, kbd, var, tt, samp, ...
-@import 'forms';
+
 @import 'content';    // article, section, table, summary, p, abbr, acronym
+@import 'forms';
 @import 'media';      // figure, figcaption, img, audio, video, canvas, details, svg
-@import 'quotes';     // blockquote, cite, q, mark, .pullquote
+
+@import 'aside';

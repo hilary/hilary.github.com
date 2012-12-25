@@ -4,15 +4,17 @@ form {
 }
 
 fieldset { 
-  border-color : #c0c0c0;
-  margin       : 0.2em;
-  @include rhythm-borders(1px, $base-lines, 1em, solid);
+  margin    : .5em;
+  padding   : .5em;
+  border    : 1px solid #c0c0c0;
+  font-size : 1em;
 }
 
 legend {
-  @include rhythm-borders(0, .5*$base-lines, 1em, none);
+  font-size    : 1em;
   margin       : 0;
   *margin-left : -0.5em;   // alignment displayed oddly: IE 7
+  border       : none;
 }
 
 textarea {
@@ -35,10 +37,11 @@ input[type="search"] {
   box-sizing         : content-box;
 }
 
-input[type="search"]::-webkit-search-cancel-button, // Remove search cancel button,
+// these properties are deprecated
+/* input[type="search"]::-webkit-search-cancel-button, // Remove search cancel button,
 input[type="search"]::-webkit-search-decoration {   // inner padding: Saf 5, Chrome OS X
   -webkit-appearance : none; 
-}
+} */
 
 html input[type="button"], // stop **breaking native a/v controls: Android 4.0.*
 input[type="reset"],

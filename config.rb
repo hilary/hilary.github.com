@@ -1,5 +1,6 @@
 # Require any additional compass plugins here.
 require "susy"
+#require 'modular-scale'
 project_type = :stand_alone
 
 # Publishing paths
@@ -16,7 +17,7 @@ fonts_dir                  = "source/fonts"
 generated_images_dir       = "source/images"
 
 # sass debugging comments
-# line_comments              = true
-line_comments              = false
-output_style               = :compressed
-# output_style               = :expanded
+line_comments              = true
+# line_comments              = false
+# output_style               = :compressed
+output_style               = :expanded

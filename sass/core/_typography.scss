@@ -1,0 +1,30 @@
+.main a { font-weight : bold; }
+body { @extend .main; }
+
+.header a { font-weight : normal; }
+header, h1, h2, h3, h4, h5, h6 { @extend .header; }
+
+.nav { 
+  font-size : .9em;
+  a { font-weight : normal; }
+}
+nav, menu { 
+  @extend .nav;
+  header, h1, h2, h3, h4, h5, h6 { @extend .nav; }
+}
+
+.aside a { font-weight : normal; }
+aside { 
+  @extend .aside; 
+  header, h1, h2, h3, h4, h5, h6 { @extend .header; }
+}
+
+.mono { font-size : .95em; } // monofonts tend to be larger than polyfonts
+.code_cl a { font-weight : bold; }
+pre, code, kbd, var, tt, samp { 
+  @extend .code_cl;
+  header, h1, h2, h3, h4, h5, h6 { @extend .code_cl; }
+}
+
+time { @extend .meta; }
+

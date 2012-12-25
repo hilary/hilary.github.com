@@ -75,7 +75,7 @@ pygments       : false
 
 #-- jekyll-scholar
 scholar :
-  style  : ieee
+  style  : ieee-w-url
   locale : en
 
   sort_by : year

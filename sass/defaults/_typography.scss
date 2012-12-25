@@ -6,13 +6,7 @@ html { // prevent iOS text size adjust after orientation change,
   -ms-text-size-adjust     : 100%;
 }
 
-.main { 
-  @extend .sans;  
-  a { font-weight : bold; }
-}
-
 body { 
-  @extend .main; 
   cursor  : auto !important; 
   margin  : 0;
   padding : 0;
@@ -22,11 +16,11 @@ b, strong { font-weight     : bold;         }
 del, s    { text-decoration : line-through; }
 em, dfn   { font-style      : italic;       }
 
-small { @include adjust-font-size-to(.8*$base-font-size);  }
-big   { @include adjust-font-size-to(1.2*$base-font-size); }
+small { font-size : .8em;  }
+big   { font-size : 1.2em; }
 
 sup, sub { 
-  @include adjust-font-size-to(.8*$base-font-size);
+  font-size : .8em;
   position : relative;
   display  : inline-block;
 }
@@ -35,10 +29,3 @@ sub { bottom : -.5em; }
 
 [hidden] { display : none; } // attribute missing in a few browsers
 
-.flex-content { max-width: 100%; height: auto; }
-
-.bullet { 
-  content : '\2022'; 
-  padding : 0 .4em;
-  display : inline-block;
-}

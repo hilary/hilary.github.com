@@ -12,8 +12,13 @@ $aside-border    : desaturate(darken($aside-bg, 7), 10);
 
     h1 { 
       margin  : 0;
-      padding : $aside-right-gutter 0 0;
-      @include at-breakpoint($horizontal-aside-layout) { padding : 0; }
+      padding : $vertical-layout-gutter 0 .67*$vertical-layout-gutter;
+      @include at-breakpoint($horizontal-aside-layout) { 
+        padding : 0 0 .67*$horizontal-aside-gutter;
+      }
+      @include at-breakpoint($aside-right-layout) { 
+        padding : $aside-right-gutter 0 .67*$aside-right-gutter;
+      }
     }
 
     ul { 
@@ -23,7 +28,13 @@ $aside-border    : desaturate(darken($aside-bg, 7), 10);
 
       li { 
         margin  : 0;
-        padding : 0 0 .1em;
+        padding : 0 0 .5*$vertical-layout-gutter;
+        @include at-breakpoint($horizontal-aside-layout) { 
+          padding : 0 0 .5*$horizontal-aside-gutter;
+        }
+        @include at-breakpoint($aside-right-layout) { 
+          padding : 0 0 .5*$aside-right-gutter;
+        }
         a {
           @include force-wrap;
           @include nav-link($resting   : $aside-link-color, 

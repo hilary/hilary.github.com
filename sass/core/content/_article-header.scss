@@ -1,0 +1,21 @@
+article > header {
+
+  margin-bottom : 0.5em;
+
+  time[itemprop="datePublished"],
+  time[itemprop="dateModified"], 
+  a[rel="bookmark"], 
+  .tag-links {
+    margin-bottom : .5em;
+  }
+
+  time[itemprop="datePublished"],
+  time[itemprop="dateModified"] { 
+    text-transform : uppercase; 
+  }
+
+  a { @include nav-link($resting : $aside-color, $activated : $link-color-visited); }
+
+  menu[label="share"] { margin-top : .5em; }
+
+}

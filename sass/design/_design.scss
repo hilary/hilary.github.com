@@ -1,6 +1,18 @@
-.sans  { font-family : Ubuntu, $sans;  }
-.serif { font-family : Quando, $serif; }
-.mono  { font-family : PT+Mono, $mono; }
-
+@import 'typography';
 @import 'core-colors';
+@import 'vertical';
 @import 'grid-geometry';
+
+.main-content { 
+
+  margin  : 0; 
+  padding : 0;
+  @include clearfix; 
+
+//  background-color : $aside-bg;
+
+//  @include at-breakpoint($aside-right-layout) { background-color : $content-bg; }
+}
+
+// in development, will replace vertical
+// @import 'modular';

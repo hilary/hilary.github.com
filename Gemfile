@@ -4,7 +4,6 @@
 source "http://rubygems.org"
 
 group :development do
-#  gem 'tilt'          , :git => 'git://github.com/rtomayko/tilt.git'
   gem 'tilt'
   gem 'rake'          , '~> 0.9.2'
   gem 'rack'          , '~> 1.4.1'
@@ -19,6 +18,7 @@ group :development do
   gem 'liquid'        , '~> 2.3.0'
   gem 'rake-minify'   , '~> 0.3.3'
 
+#  gem 'modular-scale'
   gem 'haml'
   gem 'jekyll-scholar', '~> 0.1.0'
   gem 'slim'          , '~> 1.2.2'

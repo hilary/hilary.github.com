@@ -1,0 +1,91 @@
+.main-content > .content > header,
+.excerpt > header { 
+
+  @include clearfix; 
+
+  @include at-breakpoint($vertical-layout) { 
+
+    $vertical-layout-time-columns      : 8;
+    $vertical-layout-permalink-columns : $vertical-layout-columns - $vertical-layout-time-columns;
+    time { @include span-columns($vertical-layout-time-columns, 
+                                 $vertical-layout-columns); }
+    a[rel="bookmark"] { 
+      @include span-columns($vertical-layout-permalink-columns omega, 
+                            $vertical-layout-columns);
+    }
+    .tag-links, .page-title, menu[label="share"] { 
+      @include span-columns($vertical-layout-columns omega, $vertical-layout-columns); 
+    }
+
+  }
+
+  @include at-breakpoint($horizontal-aside-layout) { 
+
+    time              { @include span-columns(6       , $horizontal-aside-columns); }
+    a[rel="bookmark"] { @include span-columns(3       , $horizontal-aside-columns); }
+    .tag-links        { @include span-columns(14 omega, $horizontal-aside-columns); }
+
+  }
+
+  @include at-breakpoint($aside-right-layout) {
+
+    time              { @include span-columns(6       , $aside-right-content-columns); }
+    a[rel="bookmark"] { @include span-columns(3       , $aside-right-content-columns); }
+    .tag-links        { @include span-columns(13 omega, $aside-right-content-columns); }
+
+  }
+}
+
+.main-content > .content > header { 
+
+  @include at-breakpoint($horizontal-aside-layout) { 
+
+    $horizontal-aside-header-share-columns : 7;
+    $horizontal-aside-header-title-columns : $horizontal-aside-columns - $horizontal-aside-header-share-columns;
+    .page-title { 
+      @include span-columns($horizontal-aside-header-title-columns,
+                            $horizontal-aside-columns); 
+    }
+    menu[label="share"] { 
+      @include span-columns($horizontal-aside-header-share-columns omega,
+                            $horizontal-aside-columns); 
+    }
+
+  }
+
+  @include at-breakpoint($aside-right-layout) {
+
+    $aside-right-header-share-columns : 6;
+    $aside-right-header-title-columns : $aside-right-content-columns - $aside-right-header-share-columns;
+    .page-title { 
+      @include span-columns($aside-right-header-title-columns,
+                            $aside-right-content-columns); 
+    }
+    menu[label="share"] { 
+      @include span-columns($aside-right-header-share-columns omega,
+                            $aside-right-content-columns); 
+    }
+
+  }
+} // .content > header
+
+.excerpt > header { 
+
+  @include at-breakpoint($horizontal-aside-layout) { 
+
+    h1 { 
+      @include span-columns($horizontal-aside-columns omega,
+                            $horizontal-aside-columns);
+    }
+  }
+
+  @include at-breakpoint($aside-right-layout) {
+
+    h1 { 
+      @include span-columns($aside-right-content-columns omega,
+                            $aside-right-content-columns); 
+    }
+  }
+} // .excerpt > header
+
+

@@ -1,0 +1,35 @@
+menu[label="share"] { 
+
+  &:after { 
+    content       : "share";
+    color         : $date-color;
+    display       : inline;
+    float         : right;
+    margin        : 0;
+    padding-top   : .2em;
+    padding-right : .6em;
+  }
+}
+
+.share-button {
+  @include horizontal-list-item(.2em);
+  @include float-right;
+
+  margin : 0;
+
+  img {
+    background-color : $content-bg;
+    border           : 2px groove lighten($date-color, 30);
+    padding          : 4px;
+    vertical-align   : middle;
+
+    @include border-radius(.4em);
+  } // img
+
+} // .share-button
+
+li.twitter-share,
+li.googleplus-share,
+li.facebook-share {
+  @extend .share-button;
+}

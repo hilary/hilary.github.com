@@ -14,7 +14,7 @@ tags         :
 I've spent much of the past several weeks working on what started as
 an [Octopress](https://github.com/imathis/octopress) theme and turned
 into its own blogging engine. This website now runs on that engine;
-Octoburn.
+Octoburn.<!--more-->
 
 You can read more about Octoburn on its [project
 page](http://hholz.com/octoburn/). The

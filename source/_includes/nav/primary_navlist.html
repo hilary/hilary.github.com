@@ -1,8 +1,14 @@
 <nav class="primary-navlist" role="navigation">
   <ul>
     <li><a href="{{ root_url }}/" itemprop="relatedLink">home</a></li>
-    <li><a href="{{ root_url }}/blog/" itemprop="relatedLink">blog</a></li>
-    <li><a href="{{ root_url }}/octoburn/" itemprop="relatedLink">octoburn</a></li>
+    <li>
+      <div class="slide">projects</div>
+      <ul>
+        <li><a href="{{ root_url }}/octoburn/" 
+               itemprop="relatedLink">octoburn</a></li>
+      </ul>
+    </li>
+    <li><a href="{{ root_url }}/blog/" itemprop="relatedLink">archive</a></li>
     <li>
       <div class="slide">about</div>
       <ul>

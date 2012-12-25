@@ -12,7 +12,7 @@ tags     :
 - stack overflow
 ---
 
-Like all emacsen, I have shaped my emacs environment over the years
+Like all emacs users, I have shaped my emacs environment over the years
 until it fits me like a second skin. Recently an integral part of that
 environment broke. After painstaking (painful?) diagnosis, I
 determined that the cause was an emacs bug and came up with a

@@ -2,7 +2,7 @@
 
   .aside-base {
 
-    @include span-columns(9 omega, $aside-right-columns); 
+    @include span-columns($aside-right-aside-columns omega, $aside-right-columns); 
     padding       : $aside-right-gutter;
     border-left   : 1px solid $aside-border;
     border-bottom : 1px solid $aside-border;

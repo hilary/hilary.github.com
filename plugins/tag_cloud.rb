@@ -58,7 +58,7 @@ module Jekyll
     def render(context)
       # get an Array of [tag name, tag count] pairs
       count = context.registers[:site].tags.map do |name, posts|
-        [name, posts.count] if posts.count >= threshold
+        [name, posts.count] if posts.count >= @threshold
       end
 
       # clear nils if any
@@ -81,7 +81,7 @@ module Jekyll
       weight.reduce("") do |html, tag|
         name, weight = tag
         size = size_min + ((size_max - size_min) * weight).to_f
-        size = sprintf("%.#{@precision}f", size)
+        size = sprintf("%.#{precision}f", size)
         html << "<a style='font-size: #{size}#{unit}' href='/tag/#{name.to_slug}.html'>#{name}</a>\n"
       end
     end

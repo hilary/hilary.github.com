@@ -23,24 +23,3 @@ mark { // missing definition: IE 7/8/9
   color            : #000;
 }
 
-.pullquote-right:before,
-.pullquote-left:before   {
-  content  : attr(data-pullquote);
-
-  margin   : 0;
-  padding  : 0;
-  position : relative;
-  width    : 45%;
-  @include adjust-font-size-to(1.4*$base-font-size); 
-}
-
-.pullquote-right:before {
-  @include float-right;
-  padding-left : 1.5em;
-}
-
-.pullquote-left:before {
-  @include float-left;
-  padding-right : 1.5em;
-}
-

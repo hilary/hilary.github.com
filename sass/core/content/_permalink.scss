@@ -1,0 +1,8 @@
+a[rel=bookmark] { 
+
+  @extend .header;
+  @extend .meta;
+  @include hover-link;
+  padding : 0 0.5em;
+  margin  : 0;
+}

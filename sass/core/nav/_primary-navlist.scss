@@ -1,0 +1,80 @@
+$primary-navlist-width : 9em;
+$offset                : -999em;
+
+.primary-navlist {
+  position : relative;
+
+  > ul { // top level nav menu
+    position   : relative;
+    width      : 100%;
+    margin     : 0; padding : 0;
+    z-index    : 10;
+
+    > li { // main entry for each category
+      position : relative;
+      margin   : 0; 
+      padding  : 0;
+      @include float-left;
+
+      > a {
+        display         : block;
+        margin          : 0;
+        font-weight     : bold;
+        text-decoration : none;
+        text-shadow     : lighten($nav-bg, 12) 0 1px;
+        @include nav-link($resting : $nav-color, $activated : $nav-color-hover);
+        &:link, &:hover, &:visited, &:active, &:focus { padding : 0.2em 1em; }
+      } // a
+
+      .slide {
+        text-indent : 1em;
+        padding     : 0.2em 0;
+
+        &:after {
+          content     : '\2730'; // '\2730' (star) 261f (down index finger)
+          margin-left : .1em;
+        }
+      }
+
+      &:hover {
+        > a { background-color : $credits-bg; }
+        > ul { left : 0; }
+      }
+
+      > ul { 
+        float            : none;
+        width            : $primary-navlist-width;
+        position         : absolute;
+        left             : $offset;
+        top              : 1.8em;
+        margin           : 0;
+        list-style-type  : none;
+        background-color : $nav-bg;
+        @include background-image(
+          linear-gradient($nav-bg-light, $nav-bg, $nav-bg-dark));
+
+        > li {
+          width  : $primary-navlist-width;
+          margin : 0;
+
+          > a { 
+            width           : $primary-navlist-width;
+            display         : block;
+            margin          : 0;
+            font-weight     : bold;
+            text-decoration : none;
+            text-shadow     : lighten($nav-bg, 12) 0 1px;
+            @include nav-link($resting : $nav-color, 
+                              $activated : $nav-color-hover);
+            &:link, &:hover, &:visited, &:active, &:focus { padding : 0.2em 1em; }
+            &:hover { background-color : $credits-bg; }
+          } // a
+
+        }
+        
+      } // end dropdowns
+    } // li
+  }
+}
+
+

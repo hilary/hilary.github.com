@@ -75,7 +75,8 @@ pygments       : false
 
 #-- jekyll-scholar
 scholar :
-  style  : ieee-w-url
+#  style  : https://github.com/citation-style-language/styles/blob/master/ieee-w-url.csl
+  style  : ieee
   locale : en
 
   sort_by : year

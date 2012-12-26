@@ -1,11 +1,10 @@
-# -*- mode: markdown -*-
 ---
 layout   : post
 title    : "diagnosing an emacs bug"
 date     : 2012-10-03 19:26
 comments : true
 sharing  : true
-tldr     : 
+tldr     : Recently an integral part of my emacs environment broke. After painstaking diagnosis, I concluded (incorrectly, as it turned out) that the cause was an emacs bug, came up with a workaround, and filed an emacs bug report.
 tags     : 
 - emacs
 - bug report
@@ -15,8 +14,14 @@ tags     :
 Like all emacs users, I have shaped my emacs environment over the years
 until it fits me like a second skin. Recently an integral part of that
 environment broke. After painstaking (painful?) diagnosis, I
-determined that the cause was an emacs bug and came up with a
-workaround. Lastly, I filed my first emacs bug report!<!--more-->
+concluded that the cause was an emacs bug, came up with a
+workaround, and filed an emacs bug report.<!--more--> 
+
+The problem turned out to be with a package I was using rather than
+with emacs itself. Going through the entire process was really useful,
+however, I came out of it not only with a deeper understanding of
+emacs but a deeper appreciation of the value of a well-designed
+package management infrastructure.
 
 ## contents {#toc}
 
@@ -449,19 +454,13 @@ can refer to it in the bug report, and submit.
 ## Coda
 
 The turn around from the emacs maintainer list was very fast. Seems it
-was one bug, local to Shell Switcher, and the bug had already been
+was one bug, local to Shell Switcher. The bug had been
 fixed in the
-[current version](http://github.com/DamienCassou/shell-switcher) on
-github (last updated nine days ago, substantially after I started down
-this path, lol.) The fellows who responded gave some helpful examples
-of how these sorts of bugs trigger the CHANGED outside Customize flag.
+[bleeding edge version](http://github.com/DamienCassou/shell-switcher) of
+Shell Switcher between the time I started diagnosing the problem and when I
+submitted my bug report. I need to hunt down how to source my emacs
+packages from a github repo, akin to how one does in a Gemfile.
 
-I find it interesting that I didn't think to check the most recent
-version on github, given that it would normally be the first thing I
-would check in, say, a ruby build. Humbling, that. A really good
-reminder that we all have problems generalizing. 
-
-I also couldn't find anyway to directly source a package from a 
-github repo, akin to how one can in a Gemfile, making the current
-solution not particularly scalable. Although, ah, that's what Chef
-is for. Sweet!
+The fellows who responded on the list gave some helpful examples
+of how these sorts of bugs trigger the `CHANGED outside Customize` flag.
+Interesting.
